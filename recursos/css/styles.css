@@ -79,6 +79,7 @@
   background-color: black;
 }
 .frmLogIn form a {
+  transition-duration: 1s;
   opacity: 0;
   color: black;
   text-decoration: none;
