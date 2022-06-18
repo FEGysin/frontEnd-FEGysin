@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="stylesheet" href="./recursos/css/styles.css" />
+  </head>
+
+  <!--<body>-->
+  <div class="indexPage">
+    <header class="encabezado">
+      <img src="./recursos/img/encabezado.png" alt="Encabezado" />
+    </header>
+    <div class="frmLogIn">
+      <form>
+        <div>
+          <img src="./recursos/img/usrColor.png" alt="" />
+          <input
+            class="logUsr"
+            type="email"
+            name="usr"
+            placeholder="user@domain.com"
+            required
+          />
+        </div>
+
+        <div>
+          <img src="./recursos/img/pwdColor.png" alt="" />
+          <input
+            class="logPwd"
+            type="password"
+            name="pwd"
+            placeholder="Contraseña"
+            required
+          />
+          <a href="./pages/log_index.html">Go</a>
+          <!--Confirma Usr y Pwd avanza a Pagina log_index (Usuario Logueado)-->
+        </div>
+        <a href="./pages/accountForm.html">Registrarme</a>
+        <!--Va a Formulario accountForm (Apertura Cuenta)-->
+        <!--<input type="button" value="Go" id="btn_validar">-->
+      </form>
+    </div>
+
+    <nav class="navBar">
+      <ul>
+        <li>
+          <a href="./index.html"> Home</a>
+        </li>
+        <li>Reel</li>
+        <li>
+          <a href="#quienessomos">Quienes Somos</a>
+        </li>
+        <li>
+          <a href="#contacto">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--<main>-->
+
+      <div class="reelPromo">
+        <!-- <section id="reel">-->
+        <img src="" alt="Slider de Promociones" />
+        <!--en esta seccion ira un Slider con promociones -->
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/n-55YJpaDys"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+        <!--</section>-->
+        <hr />
+      </div>
+
+      <div class="whoWeAre">
+        <!-- <section id="quienessomos"></section> -->
+        <h2>Quienes Somos</h2>
+        <!--En esta Seccion iran los Detalles de la Empresa-->
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt in
+          dolor, placeat sequi magnam fugiat quia, nemo blanditiis tempora
+          earum, nisi alias exercitationem. Nemo delectus recusandae quam unde
+          vitae sed! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nostrum iusto natus quam, quia, sapiente, soluta distinctio blanditiis
+          impedit provident optio magni. Eligendi, labore repellat! Nesciunt
+          dolor porro impedit ducimus suscipit. Dolor rem quia suscipit eveniet
+          iure, tempore deleniti doloremque consequatur veniam esse nisi
+          distinctio asperiores voluptate, inventore quibusdam nesciunt numquam
+          pariatur quae quis doloribus accusamus dolorem deserunt eligendi?
+          Impedit eligendi quo at sequi enim non fugit mollitia? Repellendus,
+          animi veniam. Eaque labore magnam ipsa corporis aperiam. Consequatur
+          expedita odit quisquam facilis delectus, natus ratione eos quis
+          itaque, ex aut nisi! Hic dolor officiis sed, minus aliquam quam quidem
+          iure neque?
+        </p>
+        <!--</section>-->
+        <hr />
+      </div>
+
+      <div class="ubicacion">
+        <h3>Dónde Estamos</h3>
+        <img src="./recursos/img/loc.png" alt="" />
+        <hr />
+      </div>
+
+      <div class="frmContacto">
+        <section id="contacto">
+          <form>
+            <div>
+              <h3>Contacto</h3>
+            </div>
+
+            <div>
+              <input
+                class="frmContactoMail"
+                type="email"
+                name=""
+                placeholder="Ingrese su E-MAIL"
+              />
+            </div>
+            <div>
+              <textarea
+                class="frmContactoTextbox"
+                placeholder="Ingrese su Consulta"
+                name=""
+                cols="40"
+                rows="10"
+              ></textarea>
+            </div>
+            <div class="frmContactoBtn">
+              <input type="submit" value="Enviar" />
+              <input type="reset" value="Reiniciar" />
+            </div>
+          </form>
+        </section>
+      </div>
+
+    <!--</main>-->
+    <footer class="footer"><--Este es el Footer--></footer>
+  </div>
+  </body>
+</html>

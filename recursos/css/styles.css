@@ -1,0 +1,541 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* #region Mobile*/
+
+.encabezado {
+  display: flex;
+  grid-area: encabezado;
+  background-color: black;
+  margin: 2px 1px 5px 1px;
+}
+.encabezado img {
+  height: 90%;
+}
+
+.navBar {
+  grid-area: navBar;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 2px 10px 2px 10px;
+  background-color: rgb(76, 187, 214);
+  /* position: -webkit-sticky;
+    position: sticky;*/
+}
+.navBar ul li,
+.navBar ul li a {
+  text-decoration: none;
+  font-size: 10pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+
+/* #region index*/
+
+.indexPage {
+  display: grid;
+  grid-template-areas:
+    "encabezado     encabezado"
+    "navBar         frmLogIn"
+    "reel           reel"
+    "quienesSomos   quienesSomos"
+    "ubicacion      ubicacion"
+    "frmContacto    frmContacto"
+    "footer         footer";
+  grid-template-columns: 180px 180px;
+  grid-template-rows: 120px 60px auto auto auto auto 15px;
+}
+.frmLogIn {
+  grid-area: frmLogIn;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.frmLogIn img {
+  width: 20px;
+  border: 1px solid black;
+  filter: grayscale(100%);
+}
+.logUsr {
+  opacity: 0;
+  font-size: 10pt;
+  background-color: black;
+}
+.logPwd {
+  opacity: 0;
+  font-size: 10pt;
+  background-color: black;
+}
+.frmLogIn form a {
+  opacity: 0;
+  color: black;
+  text-decoration: none;
+}
+.reelPromo {
+  grid-area: reel;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.reelpromo iframe {
+  padding: auto;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.whoWeAre {
+  grid-area: quienesSomos;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.ubicacion {
+  grid-area: ubicacion;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.frmContacto {
+  grid-area: frmContacto;
+  margin: 10px auto;
+  padding: 10px;
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.frmContactoMail {
+  margin: 10;
+  width: 300px;
+}
+.frmContactoTextbox {
+  margin: 10;
+  width: 300px;
+}
+.frmContactoBtn {
+  margin-left: 180px;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.frmLogIn:hover img {
+  filter: grayscale(0%);
+}
+.frmLogIn:hover .logUsr {
+  width: 130px;
+  transition-duration: 2s;
+  opacity: 1;
+  background-color: aliceblue;
+}
+.frmLogIn:hover .logPwd {
+  width: 100px;
+  opacity: 1;
+  transition-duration: 2s;
+  background-color: aliceblue;
+}
+.frmLogIn:hover form a {
+  opacity: 1;
+  transition-delay: 1s;
+  transition-duration: 2s;
+}
+@keyframes newHeader {
+}
+/* #endregion */
+
+/* #region logIndex*/
+
+.logIndexPage {
+  display: grid;
+
+  grid-template-columns: 90px 40fr 15fr 20fr;
+  grid-template-rows: 120px 50px auto 10px;
+  grid-template-areas:
+    "encabezado     encabezado  encabezado  encabezado"
+    "mnuProductos   none        none        mnuUsuario"
+    "mnuProductos   container   container   container"
+    "mnuProductos   footer      footer      footer";
+}
+.usr_menu {
+  grid-area: mnuUsuario;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 10px 14px;
+}
+.mnuProductos {
+  grid-area: mnuProductos;
+  margin: 10px 3px;
+  width: 100%;
+  background-color: rgba(51, 168, 247, 0.678);
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  list-style-type: none;
+  text-overflow: initial;
+  text-align: start;
+}
+/* .mnuProductos ul {
+ display: none;
+}*/
+.mnuProductos-Hidden {
+  color: black;
+}
+.mnuProductos.active {
+  color: black;
+}
+
+.mnuProductos li a {
+  color: black;
+  /*padding-left: 10px;*/
+}
+
+.carret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+.carret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+.carret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);
+}
+.nested {
+  color: black;
+  display: none;
+}
+.active {
+  display: block;
+}
+
+.itemContainer {
+  margin: 3px;
+  padding: 3px;
+  border: 1px solid black;
+  background-color: aliceblue;
+  width: 250px;
+}
+
+.itemContainer img {
+  width: 40%;
+  margin-right: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+  float: left;
+}
+.itemTxtDescription {
+  margin: 3px 3px 3px 5px;
+  font-size: 9pt;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+.itemPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin: 5px 0px 10px 10px;
+  font-size: 10pt;
+  height: 25px;
+  font-weight: bold;
+  text-align: left;
+  text-anchor: start;
+}
+
+.itemPriceImg {
+  margin: 1px 5px 1px 3px;
+  width: 60px;
+  left: 100px;
+  float: right;
+  visibility: visible;
+}
+.itemPriceImg2 {
+  width: 1px;
+  height: 1px;
+  float: right;
+  opacity: 0;
+  visibility: hidden;
+}
+.itemPrice:hover .itemPriceImg2 {
+  transition-delay: 0.25s;
+  transition-duration: 1s;
+  width: 30px;
+  height: 30px;
+  visibility: visible;
+  opacity: 1;
+}
+.itemPrice:hover .itemPriceImg {
+  transition-duration: 0.75s;
+  width: 0%;
+  opacity: 0;
+  visibility: hidden;
+}
+@keyframes itemHover {
+  0% {
+    top: 0px;
+    right: 0px;
+  }
+  20% {
+    top: -1px;
+    right: 1px;
+    box-shadow: 1px, 1px, 1px black;
+  }
+  60% {
+    top: -2px;
+    right: 2px;
+    box-shadow: 2px, 2px, 2px black;
+  }
+  100% {
+    top: -3px;
+    right: 3px;
+    box-shadow: 4px, 4px, 6px black;
+  }
+}
+.itemContainer:hover {
+  animation-name: itemHover;
+  animation-duration: 1s;
+  position: relative;
+  top: -3px;
+  right: 3px;
+  box-shadow: 4px 4px 6px black;
+}
+
+/* #endregion */
+
+/* #region myCart*/
+
+.myCartPage {
+  display: grid;
+  grid-column: 90%;
+  grid-template-rows: 120px 20px auto 10px;
+  grid-template-areas:
+    "encabezado"
+    "navBar "
+    "container"
+    "footer";
+}
+.navBar {
+  justify-content: space-evenly;
+}
+.myCartContainer {
+  margin: 3px;
+  padding: 3px;
+  border: 1px solid black;
+  background-color: aliceblue;
+  width: 340px;
+  height: max-content;
+}
+.myCartContainer img {
+  width: 40%;
+  margin-right: 5px;
+  border: 1px solid black;
+  float: left;
+  border-radius: 4px;
+}
+.myCartTxtDescription {
+  background-color: silver;
+  margin: 3px 3px 3px 5px;
+  font-size: 9pt;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+.myCartBtn {
+  background-color: darkslateblue;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+}
+
+/* #endregion */
+
+/* #region histCpras*/
+
+/* #endregion */
+
+/* #region accountForm*/
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region Desktop*/
+@media screen and (min-width: 768px) {
+  /* #region index*/
+
+  .indexPage {
+    display: grid;
+    grid-template-areas:
+      "encabezado     encabezado      frmLogIn"
+      "navBar         navBar          navBar  "
+      "reel           reel            none"
+      "quienesSomos   quienesSomos    none"
+      "frmContacto    ubicacion       none"
+      "footer         footer          footer  ";
+    grid-template-columns: 40% 40% 20%;
+    grid-template-rows: 120px 40px 2fr 1fr 1fr 15px;
+  }
+  .encabezado {
+    height: 110px;
+    margin: 10px 0px 0px 10px;
+  }
+  .encabezado img {
+    height: 90%;
+  }
+
+  .navBar ul li,
+  .navBar ul li a {
+    text-decoration: none;
+    font-size: 14pt;
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+  }
+  .frmLogIn {
+    background-color: black;
+    margin: 10px 20px 0px 0px;
+    padding: 20px 8%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 110px;
+    width: 100%;
+  }
+  .frmLogIn img {
+    width: 20px;
+    border: 1px solid black;
+  }
+  .logUsr {
+    width: 0px;
+    font-size: 10pt;
+    transition-duration: 2s;
+  }
+  .logPwd {
+    width: 0px;
+    font-size: 10pt;
+    transition-duration: 2s;
+  }
+  .frmLogIn form a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .whoWeAre p {
+    font-size: 14pt;
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+  }
+
+  .frmContacto {
+    width: 100%;
+    border: none;
+  }
+  .frmContactoMail {
+    margin: 2px;
+    width: 90%;
+  }
+  .frmContactoTextbox {
+    margin: 2px;
+    width: 90%;
+  }
+  .frmContactoBtn {
+    margin-left: 70%;
+  }
+  /* #endregion */
+
+  /* #region logIndex*/
+
+  /* #endregion */
+
+  /* #region myCart*/
+
+  /* #endregion */
+
+  /* #region histCpras*/
+
+  /* #endregion */
+
+  /* #region accountForm*/
+
+  /* #endregion */
+}
+/* #endregion */
+.bodyCont {
+  grid-area: container;
+  margin: 5px;
+  /*background-color: rgb(0, 136, 255);*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.container {
+  margin: 10px 10px 10px 5px;
+  background-color: rgb(255, 0, 64);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.bodyCont p {
+  font-size: 10pt;
+  text-align: center;
+  width: 90%;
+}
+
+.itemDescription {
+  margin: 5;
+}
+.itemDescription Img {
+  width: 40%;
+  border: 1px solid black;
+
+  float: left;
+}
+.itemDesTxtDescription {
+  background-color: silver;
+  font-size: 12px 2px 2px 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin-left: 60px;
+}
+
+.hisCprasImg {
+  width: 50px, 2px;
+  margin-left: 8px;
+}
+.hisCprasTxtDescription {
+  background-color: silver;
+  font-size: 12px 2px 2px 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin-left: 60px;
+}
+.hisCprasBtn {
+  background-color: darkslateblue;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+}

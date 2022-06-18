@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body class="accountInfoPage">
+    <header id="encabezado">
+      <img src="../recursos/img/encabezado.png" alt="Encabezado" />
+    </header>
+    <main>
+      <h2>Formulario Registro</h2>
+      <form action="./Log_index.html">
+        <br />
+        <fieldset>
+          <legend>Alta Cuenta</legend>
+          <label for="input_nombre">Nombre</label>
+          <input type="text" name="" id="input_nombre" size="30" /><br />
+          <label for="input_apellido">Apellido</label>
+          <input type="text" name="" id="input_apellido" size="20" /><br />
+          <label for="input_email">E-MAIL</label
+          ><input type="email" name="" id="input_email" size="40" /><br />
+          <label for="input_domicilio">Domicilio</label
+          ><input type="text" name="" id="input_domicilio" size="50" /> <br />
+          <label for="input_codpos">C.Postal</label
+          ><input type="text" name="" id="input_codpos" size="6" />
+          <label for="input_tel">Telefono</label
+          ><input type="tel" name="" id="input_tel" /><br />
+          <label for="input_pwd">Ingrese PassWord</label
+          ><input type="password" name="" id="input_pwd" /><br />
+          <label for="input_pwd2">Confirme PassWord</label>
+          <input type="password" name="" id="input_pwd2" /><br />
+          <label for="input_txtarea">Comentarios</label> <br />
+          <textarea
+            rows="10"
+            cols="40"
+            name="Comentarios"
+            id="input_txtarea"
+          ></textarea>
+          <br />
+
+          <input type="submit" value="Enviar" />
+          <input type="reset" value="Reiniciar" />
+          <input
+            type="button"
+            onclick="location.href='./Log_index.html'"
+            value="Cancelar"
+          />
+        </fieldset>
+      </form>
+    </main>
+    <footer><--Este es el Footer--></footer>
+  </body>
+</html>

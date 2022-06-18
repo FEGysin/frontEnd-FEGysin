@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documennavt</title>
+    <link rel="stylesheet" href="../recursos/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="logIndexPage">
+      <header class="encabezado">
+        <img src="../recursos/img/encabezado.png" alt="Encabezado" />
+      </header>
+      <div class="usr_menu">
+        <form>
+          <label for="usr_menu">Menu Usuario</label><br />
+          <select name="" id="usr_menu" onchange="location=this.value">
+            <option></option>
+            <option value="./accountForm2.html">Mis Datos</option>
+            <option value="./histCompras.html">Mis Compras</option>
+            <option value="./mycart.html">Carrito</option>
+            <option value="../index.html">Salir</option>
+          </select>
+        </form>
+      </div>
+
+      <div class="mnuProductos">
+        <ul id="prductsMenu">
+          <li>
+            <span class="carret">Productos</span>
+            <ul class="nested">
+              <li><a href="#prod_cons_cons">Construccion</a></li>
+
+              <li><a href="#prod_cons_seco">Construccion en Seco</a></li>
+
+              <li><a href="#prod_cons_plomeria">Plomeria</a></li>
+
+              <li><a href="#prod_cons_gas">Gas</a></li>
+
+              <li><a href="#prod_cons_electricidad">Electricidad</a></li>
+            </ul>
+          </li>
+          <li>
+            <span class="carret"> Herramientas</span>
+            <!--<a href="#prod_herr">Herramientas</a>-->
+            <ul class="nested">
+              <li>
+                <a href="#prod_herr_destornilladores">Destornilladores</a>
+              </li>
+              <li><a href="#prod_herr_martillos">Martillos</a></li>
+              <li><a href="#prod_herr_cortafierros">Cortafierros</a></li>
+              <li>
+                <span class="carret">Perforadoras</span>
+                <!--<a href="#prod_herr_perforadoras">Perforadoras</a>-->
+                <ul class="nested">
+                  <li><a href="">Rotopercutoras</a></li>
+                  <li><a href="">Perforadoras Manuales</a></li>
+                  <li><a href="">Perforadoras de Banco</a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="carret">Amoladoras</span>
+                <!--<a href="#prod_herr_amoladoras">Amoladoras</a>-->
+                <ul class="nested">
+                  <li><a href="">Amoladoras de Banco</a></li>
+                  <li><a href="">Amoladoras Angulares</a></li>
+                </ul>
+              </li>
+              <li><a href="#prod_herr_mezcladoras">Mezcladoras</a></li>
+              <li>
+                <span class="carret">Sierras</span>
+                <!--<a href="#prod_herr_sierras">Sierras</a>-->
+                <ul class="nested">
+                  <li><a href="">Sierras Manuales</a></li>
+                  <li><a href="">Sierras de Banco</a></li>
+                  <li><a href="">Caladoras</a></li>
+                </ul>
+              </li>
+              <li><a href="#prod_herr_hidrolavadoras">Hidro-Lavadoras</a></li>
+              <li><a href="#prod_herr_compresores">Compresores de Aire</a></li>
+            </ul>
+          </li>
+          <li><a href="#prod_ferr">Ferreteria</a></li>
+          <li><a href="#serv">Servicios</a></li>
+        </ul>
+      </div>
+
+      <div class="bodyCont">
+        <section id="prod"><p><--Productos--></p></section>
+
+        <section id="prod_cons"><p><-- Seccion Construccion --></p></section>
+
+        <section id="prod_cons_cons">
+          <p><-- Materiales de Construccion --></p>
+        <div class="container">
+          <div class="itemContainer">
+            <img src="../recursos/img/cemento1.jpg" alt="Cemento" />
+            <div class="itemTxtDescription">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              ratione officiis vitae sed et, eum velit saepe ipsum corrupti
+              error magni amet debitis. Cupiditate perspiciatis dolores, laborum
+              aliquam quis error?
+
+              <div class="itemPrice">
+                <div>$99.999.999.99</div>
+                <img class="itemPriceImg" src="../recursos/img/add.png" alt="AddCarrito" />
+                <img class="itemPriceImg2" src="../recursos/img/Added.png" alt="Added">
+              </div>
+            </div>
+          </div>
+          <div class="itemContainer">
+            <img src="../recursos/img/cemento1.jpg" alt="Cemento" />
+
+            <div class="itemTxtDescription">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              ratione officiis vitae sed et, eum velit saepe ipsum corrupti
+              error magni amet debitis. Cupiditate perspiciatis dolores, laborum
+              aliquam quis error?
+
+              <div class="itemPrice">
+                <div>$99.999.999.99</div>
+                <img class="itemPriceImg" src="../recursos/img/add.png" alt="AddCarrito" />
+                <img class="itemPriceImg2" src="../recursos/img/added.png" alt="Added">              </div>
+              </div>
+            </div>
+          <div class="itemContainer">
+            <img src="../recursos/img/cemento1.jpg" alt="Cemento" />
+            <div class="itemTxtDescription">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              ratione officiis vitae sed et, eum velit saepe ipsum corrupti
+              error magni amet debitis. Cupiditate perspiciatis dolores, laborum
+              aliquam quis error?
+
+              <div class="itemPrice"> 
+                <div>$99.999.999.99</div>
+                <img class="itemPriceImg" src="../recursos/img/add.png" alt="AddCarrito" />
+                <img class="itemPriceImg2" src="../recursos/img/Added.png" alt="Added">
+              </div>
+            </div>
+          </div>
+          <div class="itemContainer">
+            <img src="../recursos/img/cemento1.jpg" alt="Cemento" />
+            <div class="itemTxtDescription">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              ratione officiis vitae sed et, eum velit saepe ipsum corrupti
+              error magni amet debitis. Cupiditate perspiciatis dolores, laborum
+              aliquam quis error?
+
+              <div class="itemPrice">
+                <div>$99.999.999.99</div>
+                <img class="itemPriceImg" src="../recursos/img/add.png" alt="AddCarrito" />
+                <img class="itemPriceImg2" src="../recursos/img/Added.png" alt="Added">
+                  </div>
+            </div>
+          </div>
+          <div class="itemContainer">
+            <img src="../recursos/img/cemento1.jpg" alt="Cemento" />
+            <div class="itemTxtDescription">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              ratione officiis vitae sed et, eum velit saepe ipsum corrupti
+              error magni amet debitis. Cupiditate perspiciatis dolores, laborum
+              aliquam quis error?
+
+              <div class="itemPrice">
+                <div>$99.999.999.99</div>
+                <img class="itemPriceImg" src="../recursos/img/add.png" alt="AddCarrito" />
+                <img class="itemPriceImg2" src="../recursos/img/Added.png" alt="Added">               
+              </div>
+            </div>
+          </div>
+          <div class="itemContainer">
+            <img src="../recursos/img/cemento1.jpg" alt="Cemento" />
+            <div class="itemTxtDescription">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              ratione officiis vitae sed et, eum velit saepe ipsum corrupti
+              error magni amet debitis. Cupiditate perspiciatis dolores, laborum
+              aliquam quis error?
+
+              <div class="itemPrice">
+                <div>$99.999.999.99</div>
+                <img class="itemPriceImg" src="../recursos/img/add.png" alt="AddCarrito" />
+                <img class="itemPriceImg2" src="../recursos/img/Added.png" alt="Added">
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+    
+      <section id="prod_cons_seco">
+        <p><-- Construccion en Seco --></p>
+      </section>
+
+      <section id="prod_cons_plomeria">
+        <p><-- Instalacion de Agua y Cloacas --></p>
+      </section>
+
+      <section id="prod_cons_gas">
+        <p><-- Instalacion de Gas --></p>
+      </section>
+
+      <section id="prod_cons_electricidad">
+        <p><-- Electricidad --></p>
+      </section>
+
+      <section id="prod_herr">
+        <p><-- Seccion Herramientas --></p>
+      </section>
+
+      <section id="prod_herr_destornilladores">
+        <p><-- Destornilladores --></p>
+      </section>
+
+      <section id="prod_herr_martillos">
+        <p><-- Martillos --></p>
+      </section>
+
+      <section id="prod_herr_cortafierros">
+        <p><-- Cortafierros --></p>
+      </section>
+
+      <section id="prod_herr_perforadoras">
+        <p><-- Perforadoras y Rotomartillos --></p>
+      </section>
+
+      <section id="prod_herr_amoladoras">
+        <p><-- Amoladoras --></p>
+      </section>
+
+      <section id="prod_herr_mezcladoras">
+        <p><-- Mezcladoras --></p>
+      </section>
+
+      <section id="prod_herr_sierras">
+        <p><-- Sierras --></p>
+      </section>
+
+      <section id="prod_herr_hidrolavadoras">
+        <p><-- Hidro-Lavadoras --></p>
+      </section>
+
+      <section id="prod_herr_compresores">
+        <p><-- Compresores de Aire --></p>
+      </section>
+
+      <section id="prod_ferr">
+        <p><-- Ferreteria --></p>
+      </section>
+
+      <section id="serv">
+        <p><-- Servicios --></p>
+      </section>
+      <footer><--Este es el Footer--></footer>
+    </div>
+    
+    <script>
+      var toggler = document.getElementsByClassName("carret");
+      var i;
+      for (i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function () {
+          this.parentElement
+            .querySelector(".nested")
+            .classList.toggle("active");
+          this.classList.toggle("carret-down");
+        });
+      }
+    </script>
+  </body>
+</html>
