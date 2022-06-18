@@ -60,9 +60,13 @@
   flex-wrap: wrap;
 }
 .frmLogIn img {
+  position: relative;
   width: 20px;
   border: 1px solid black;
+  transition-delay: 700ms;
+  transition-duration: 1s;
   filter: grayscale(100%);
+  left: 130px;
 }
 .logUsr {
   opacity: 0;
@@ -133,18 +137,24 @@
 }
 
 .frmLogIn:hover img {
+  transition-delay: 1ms;
   filter: grayscale(0%);
+  left: 0px;
+  transition-duration: 1s;
 }
+
 .frmLogIn:hover .logUsr {
-  width: 130px;
+  transition-delay: 100ms;
   transition-duration: 2s;
+  width: 130px;
   opacity: 1;
   background-color: aliceblue;
 }
 .frmLogIn:hover .logPwd {
+  transition-delay: 100ms;
+  transition-duration: 2s;
   width: 100px;
   opacity: 1;
-  transition-duration: 2s;
   background-color: aliceblue;
 }
 .frmLogIn:hover form a {
