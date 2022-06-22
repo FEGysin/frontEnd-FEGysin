@@ -8,22 +8,18 @@
 
 .encabezado {
   display: flex;
-  grid-area: encabezado;
   background-color: black;
-  margin: 2px 1px 5px 1px;
 }
 .encabezado img {
   height: 90%;
 }
 
 .navBar {
-  grid-area: navBar;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 2px 10px 2px 10px;
   background-color: rgb(76, 187, 214);
   /* position: -webkit-sticky;
     position: sticky;*/
@@ -39,29 +35,14 @@
 
 /* #region index*/
 
-.indexPage {
-  display: grid;
-  grid-template-areas:
-    "encabezado     encabezado"
-    "navBar         frmLogIn"
-    "reel           reel"
-    "quienesSomos   quienesSomos"
-    "ubicacion      ubicacion"
-    "frmContacto    frmContacto"
-    "footer         footer";
-  grid-template-columns: 180px 180px;
-  grid-template-rows: 120px 60px auto auto auto auto 15px;
-}
 .frmLogIn {
-  grid-area: frmLogIn;
-  margin: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .frmLogIn img {
   position: relative;
-  width: 20px;
+  width: 30px;
   border: 1px solid black;
   transition-delay: 700ms;
   transition-duration: 1s;
@@ -85,9 +66,6 @@
   text-decoration: none;
 }
 .reelPromo {
-  grid-area: reel;
-  margin: 5px;
-  padding: 5px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -98,22 +76,14 @@
   max-height: fit-content;
 }
 .whoWeAre {
-  grid-area: quienesSomos;
-  margin: 10px;
   display: flex;
   flex-direction: column;
 }
 .ubicacion {
-  grid-area: ubicacion;
-  margin: 20px;
   display: flex;
   flex-direction: column;
 }
 .frmContacto {
-  grid-area: frmContacto;
-  margin: 10px auto;
-  padding: 10px;
-  width: 320px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -122,19 +92,13 @@
   border-radius: 5px;
 }
 .frmContactoMail {
-  margin: 10;
   width: 300px;
 }
 .frmContactoTextbox {
-  margin: 10;
   width: 300px;
 }
 .frmContactoBtn {
   margin-left: 180px;
-}
-
-.footer {
-  grid-area: footer;
 }
 
 .frmLogIn:hover img {
@@ -169,27 +133,12 @@
 
 /* #region logIndex*/
 
-.logIndexPage {
-  display: grid;
-
-  grid-template-columns: 90px 40fr 15fr 20fr;
-  grid-template-rows: 120px 50px auto 10px;
-  grid-template-areas:
-    "encabezado     encabezado  encabezado  encabezado"
-    "mnuProductos   none        none        mnuUsuario"
-    "mnuProductos   container   container   container"
-    "mnuProductos   footer      footer      footer";
-}
 .usr_menu {
-  grid-area: mnuUsuario;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin: 10px 14px;
 }
 .mnuProductos {
-  grid-area: mnuProductos;
-  margin: 10px 3px;
   width: 100%;
   background-color: rgba(51, 168, 247, 0.678);
   font-size: 9pt;
@@ -240,8 +189,6 @@
 }
 
 .itemContainer {
-  margin: 3px;
-  padding: 3px;
   border: 1px solid black;
   background-color: aliceblue;
   width: 250px;
@@ -265,7 +212,6 @@
   display: flex;
   flex-direction: row;
   justify-content: right;
-  margin: 5px 0px 10px 10px;
   font-size: 10pt;
   height: 25px;
   font-weight: bold;
@@ -335,22 +281,10 @@
 
 /* #region myCart*/
 
-.myCartPage {
-  display: grid;
-  grid-column: 90%;
-  grid-template-rows: 120px 20px auto 10px;
-  grid-template-areas:
-    "encabezado"
-    "navBar "
-    "container"
-    "footer";
-}
 .navBar {
   justify-content: space-evenly;
 }
 .myCartContainer {
-  margin: 3px;
-  padding: 3px;
   border: 1px solid black;
   background-color: aliceblue;
   width: 340px;
@@ -394,37 +328,17 @@
 @media screen and (min-width: 768px) {
   /* #region index*/
 
-  .indexPage {
-    display: grid;
-    grid-template-areas:
-      "encabezado     encabezado      frmLogIn"
-      "navBar         navBar          navBar  "
-      "reel           reel            none"
-      "quienesSomos   quienesSomos    none"
-      "frmContacto    ubicacion       none"
-      "footer         footer          footer  ";
-    grid-template-columns: 40% 40% 20%;
-    grid-template-rows: 120px 40px 2fr 1fr 1fr 15px;
-  }
   .encabezado {
     height: 110px;
-    margin: 10px 0px 0px 10px;
-  }
-  .encabezado img {
-    height: 90%;
+    padding-left: 1rem;
   }
 
   .navBar ul li,
   .navBar ul li a {
-    text-decoration: none;
     font-size: 14pt;
-    font-family: "Times New Roman", Times, serif;
-    color: black;
   }
   .frmLogIn {
     background-color: black;
-    margin: 10px 20px 0px 0px;
-    padding: 20px 8%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -432,7 +346,7 @@
     width: 100%;
   }
   .frmLogIn img {
-    width: 20px;
+    width: 30px;
     border: 1px solid black;
   }
   .logUsr {
@@ -491,7 +405,6 @@
 }
 /* #endregion */
 .bodyCont {
-  grid-area: container;
   margin: 5px;
   /*background-color: rgb(0, 136, 255);*/
   font-family: Verdana, Geneva, Tahoma, sans-serif;
