@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.usr_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.mnuProductos {
+  width: 100%;
+  background-color: rgba(51, 168, 247, 0.678);
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  list-style-type: none;
+  text-overflow: initial;
+  text-align: start;
+}
+.mnuProductos-Hidden {
+  color: black;
+}
+.mnuProductos.active {
+  color: black;
+}
+
+.mnuProductos li a {
+  color: black;
+  /*padding-left: 10px;*/
+}
+
+.carret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+.carret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+.carret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);
+}
+.nested {
+  color: black;
+  display: none;
+}
+.active {
+  display: block;
+}
+
+.itemContainer {
+  border: 1px solid black;
+  background-color: aliceblue;
+  width: 250px;
+}
+
+.itemContainer img {
+  width: 40%;
+  margin-right: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+  float: left;
+}
+.itemTxtDescription {
+  margin: 3px 3px 3px 5px;
+  font-size: 9pt;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+.itemPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  font-size: 10pt;
+  height: 25px;
+  font-weight: bold;
+  text-align: left;
+  text-anchor: start;
+}
+
+.itemPriceImg {
+  margin: 1px 5px 1px 3px;
+  width: 60px;
+  left: 100px;
+  float: right;
+  visibility: visible;
+}
+.itemPriceImg2 {
+  width: 1px;
+  height: 1px;
+  float: right;
+  opacity: 0;
+  visibility: hidden;
+}
+.itemPrice:hover .itemPriceImg2 {
+  transition-delay: 0.25s;
+  transition-duration: 1s;
+  width: 30px;
+  height: 30px;
+  visibility: visible;
+  opacity: 1;
+}
+.itemPrice:hover .itemPriceImg {
+  transition-duration: 0.75s;
+  width: 0%;
+  opacity: 0;
+  visibility: hidden;
+}
+@keyframes itemHover {
+  0% {
+    top: 0px;
+    right: 0px;
+  }
+  20% {
+    top: -1px;
+    right: 1px;
+    box-shadow: 1px, 1px, 1px black;
+  }
+  60% {
+    top: -2px;
+    right: 2px;
+    box-shadow: 2px, 2px, 2px black;
+  }
+  100% {
+    top: -3px;
+    right: 3px;
+    box-shadow: 4px, 4px, 6px black;
+  }
+}
+.itemContainer:hover {
+  animation-name: itemHover;
+  animation-duration: 1s;
+  position: relative;
+  top: -3px;
+  right: 3px;
+  box-shadow: 4px 4px 6px black;
+}

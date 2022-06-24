@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frmLogIn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.frmLogIn img {
+  position: relative;
+  width: 30px;
+  border: 1px solid black;
+  transition-delay: 700ms;
+  transition-duration: 1s;
+  filter: grayscale(100%);
+  left: 130px;
+}
+.logUsr {
+  opacity: 0;
+  font-size: 10pt;
+  background-color: black;
+}
+.logPwd {
+  opacity: 0;
+  font-size: 10pt;
+  background-color: black;
+}
+.frmLogIn form a {
+  transition-duration: 1s;
+  opacity: 0;
+  color: black;
+  text-decoration: none;
+}
+
+.carousel-item {
+  height: 40rem;
+}
+.reelPromo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.reelpromo iframe {
+  padding: auto;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.whoWeAre {
+  display: flex;
+  flex-direction: column;
+}
+.ubicacion {
+  display: flex;
+  flex-direction: column;
+}
+.frmContacto {
+  margin-left: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.frmContactoMail {
+  margin: 2px;
+  width: 99%;
+}
+.frmContactoTextbox {
+  margin: 2px;
+  width: 99%;
+}
+.frmContactoBtn {
+  margin-left: 60%;
+}
+
+@keyframes newHeader {
+}
+
+.frmLogIn:hover img {
+  transition-delay: 1ms;
+  filter: grayscale(0%);
+  left: 0px;
+  transition-duration: 1s;
+}
+
+.frmLogIn:hover .logUsr {
+  transition-delay: 100ms;
+  transition-duration: 2s;
+  width: 130px;
+  opacity: 1;
+  background-color: aliceblue;
+}
+.frmLogIn:hover .logPwd {
+  transition-delay: 100ms;
+  transition-duration: 2s;
+  width: 100px;
+  opacity: 1;
+  background-color: aliceblue;
+}
+.frmLogIn:hover form a {
+  opacity: 1;
+  transition-delay: 1s;
+  transition-duration: 2s;
+}
+@media screen and (min-width: 768px) {
+  .frmLogIn {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 110px;
+    width: 100%;
+  }
+  .frmLogIn img {
+    width: 30px;
+    border: 1px solid black;
+  }
+  .logUsr {
+    width: 0px;
+    font-size: 10pt;
+    transition-duration: 2s;
+  }
+  .logPwd {
+    width: 0px;
+    font-size: 10pt;
+    transition-duration: 2s;
+  }
+  .frmLogIn form a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .whoWeAre p {
+    font-size: 14pt;
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+  }
+  .frmContactoBtn {
+    margin-left: 75%;
+  }
+}

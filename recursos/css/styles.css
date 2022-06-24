@@ -9,9 +9,10 @@
 .encabezado {
   display: flex;
   background-color: black;
+  justify-content: center;
 }
 .encabezado img {
-  height: 90%;
+  width: 90%;
 }
 
 .navBar {
@@ -21,9 +22,8 @@
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: rgb(76, 187, 214);
-  /* position: -webkit-sticky;
-    position: sticky;*/
 }
+
 .navBar ul li,
 .navBar ul li a {
   text-decoration: none;
@@ -33,433 +33,77 @@
   color: black;
 }
 
-/* #region index*/
-
-.frmLogIn {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.frmLogIn img {
-  position: relative;
-  width: 30px;
-  border: 1px solid black;
-  transition-delay: 700ms;
-  transition-duration: 1s;
-  filter: grayscale(100%);
-  left: 130px;
-}
-.logUsr {
-  opacity: 0;
-  font-size: 10pt;
-  background-color: black;
-}
-.logPwd {
-  opacity: 0;
-  font-size: 10pt;
-  background-color: black;
-}
-.frmLogIn form a {
-  transition-duration: 1s;
-  opacity: 0;
-  color: black;
-  text-decoration: none;
-}
-.reelPromo {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.reelpromo iframe {
-  padding: auto;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-}
-.whoWeAre {
-  display: flex;
-  flex-direction: column;
-}
-.ubicacion {
-  display: flex;
-  flex-direction: column;
-}
-.frmContacto {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-evenly;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-.frmContactoMail {
-  width: 300px;
-}
-.frmContactoTextbox {
-  width: 300px;
-}
-.frmContactoBtn {
-  margin-left: 180px;
-}
-
-.frmLogIn:hover img {
-  transition-delay: 1ms;
-  filter: grayscale(0%);
-  left: 0px;
-  transition-duration: 1s;
-}
-
-.frmLogIn:hover .logUsr {
-  transition-delay: 100ms;
-  transition-duration: 2s;
-  width: 130px;
-  opacity: 1;
-  background-color: aliceblue;
-}
-.frmLogIn:hover .logPwd {
-  transition-delay: 100ms;
-  transition-duration: 2s;
-  width: 100px;
-  opacity: 1;
-  background-color: aliceblue;
-}
-.frmLogIn:hover form a {
-  opacity: 1;
-  transition-delay: 1s;
-  transition-duration: 2s;
-}
-@keyframes newHeader {
-}
-/* #endregion */
-
-/* #region logIndex*/
-
-.usr_menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.mnuProductos {
-  width: 100%;
-  background-color: rgba(51, 168, 247, 0.678);
-  font-size: 9pt;
-  font-family: "Times New Roman", Times, serif;
-  list-style-type: none;
-  text-overflow: initial;
-  text-align: start;
-}
-/* .mnuProductos ul {
- display: none;
-}*/
-.mnuProductos-Hidden {
-  color: black;
-}
-.mnuProductos.active {
-  color: black;
-}
-
-.mnuProductos li a {
-  color: black;
-  /*padding-left: 10px;*/
-}
-
-.carret {
-  cursor: pointer;
-  -webkit-user-select: none; /* Safari 3.1+ */
-  -moz-user-select: none; /* Firefox 2+ */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none;
-}
-.carret::before {
-  content: "\25B6";
-  color: black;
-  display: inline-block;
-  margin-right: 6px;
-}
-.carret-down::before {
-  -ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Safari */
-  transform: rotate(90deg);
-}
-.nested {
-  color: black;
-  display: none;
-}
-.active {
-  display: block;
-}
-
-.itemContainer {
-  border: 1px solid black;
-  background-color: aliceblue;
-  width: 250px;
-}
-
-.itemContainer img {
-  width: 40%;
-  margin-right: 5px;
-  border: 1px solid black;
-  border-radius: 4px;
-  float: left;
-}
-.itemTxtDescription {
-  margin: 3px 3px 3px 5px;
-  font-size: 9pt;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-}
-
-.itemPrice {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  font-size: 10pt;
-  height: 25px;
-  font-weight: bold;
-  text-align: left;
-  text-anchor: start;
-}
-
-.itemPriceImg {
-  margin: 1px 5px 1px 3px;
-  width: 60px;
-  left: 100px;
-  float: right;
-  visibility: visible;
-}
-.itemPriceImg2 {
-  width: 1px;
-  height: 1px;
-  float: right;
-  opacity: 0;
-  visibility: hidden;
-}
-.itemPrice:hover .itemPriceImg2 {
-  transition-delay: 0.25s;
-  transition-duration: 1s;
-  width: 30px;
-  height: 30px;
-  visibility: visible;
-  opacity: 1;
-}
-.itemPrice:hover .itemPriceImg {
-  transition-duration: 0.75s;
-  width: 0%;
-  opacity: 0;
-  visibility: hidden;
-}
-@keyframes itemHover {
-  0% {
-    top: 0px;
-    right: 0px;
-  }
-  20% {
-    top: -1px;
-    right: 1px;
-    box-shadow: 1px, 1px, 1px black;
-  }
-  60% {
-    top: -2px;
-    right: 2px;
-    box-shadow: 2px, 2px, 2px black;
-  }
-  100% {
-    top: -3px;
-    right: 3px;
-    box-shadow: 4px, 4px, 6px black;
-  }
-}
-.itemContainer:hover {
-  animation-name: itemHover;
-  animation-duration: 1s;
-  position: relative;
-  top: -3px;
-  right: 3px;
-  box-shadow: 4px 4px 6px black;
-}
-
-/* #endregion */
-
-/* #region myCart*/
-
-.navBar {
-  justify-content: space-evenly;
-}
-.myCartContainer {
-  border: 1px solid black;
-  background-color: aliceblue;
-  width: 340px;
-  height: max-content;
-}
-.myCartContainer img {
-  width: 40%;
-  margin-right: 5px;
-  border: 1px solid black;
-  float: left;
-  border-radius: 4px;
-}
-.myCartTxtDescription {
-  background-color: silver;
-  margin: 3px 3px 3px 5px;
-  font-size: 9pt;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-}
-.myCartBtn {
-  background-color: darkslateblue;
-  font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  margin: 0px 0px 0px 0px;
-}
-
-/* #endregion */
-
-/* #region histCpras*/
-
-/* #endregion */
-
-/* #region accountForm*/
-
-/* #endregion */
-
-/* #endregion */
-
 /* #region Desktop*/
 @media screen and (min-width: 768px) {
-  /* #region index*/
-
   .encabezado {
     height: 110px;
     padding-left: 1rem;
   }
-
+  .encabezado img {
+    width: 100%;
+  }
   .navBar ul li,
   .navBar ul li a {
     font-size: 14pt;
   }
-  .frmLogIn {
-    background-color: black;
+
+  .bodyCont {
+    margin: 5px;
+    /*background-color: rgb(0, 136, 255);*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    height: 110px;
-    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: column;
   }
-  .frmLogIn img {
-    width: 30px;
+  .container {
+    margin: 10px 10px 10px 5px;
+    background-color: rgb(255, 0, 64);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  .bodyCont p {
+    font-size: 10pt;
+    text-align: center;
+    width: 90%;
+  }
+
+  .itemDescription {
+    margin: 5;
+  }
+  .itemDescription Img {
+    width: 40%;
     border: 1px solid black;
+
+    float: left;
   }
-  .logUsr {
-    width: 0px;
-    font-size: 10pt;
-    transition-duration: 2s;
-  }
-  .logPwd {
-    width: 0px;
-    font-size: 10pt;
-    transition-duration: 2s;
-  }
-  .frmLogIn form a {
-    color: white;
-    text-decoration: none;
+  .itemDesTxtDescription {
+    background-color: silver;
+    font-size: 12px 2px 2px 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-left: 60px;
   }
 
-  .whoWeAre p {
-    font-size: 14pt;
-    font-family: "Times New Roman", Times, serif;
-    color: black;
+  .hisCprasImg {
+    width: 50px, 2px;
+    margin-left: 8px;
   }
-
-  .frmContacto {
-    width: 100%;
-    border: none;
+  .hisCprasTxtDescription {
+    background-color: silver;
+    font-size: 12px 2px 2px 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-left: 60px;
   }
-  .frmContactoMail {
-    margin: 2px;
-    width: 90%;
+  .hisCprasBtn {
+    background-color: darkslateblue;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
   }
-  .frmContactoTextbox {
-    margin: 2px;
-    width: 90%;
-  }
-  .frmContactoBtn {
-    margin-left: 70%;
-  }
-  /* #endregion */
-
-  /* #region logIndex*/
-
-  /* #endregion */
-
-  /* #region myCart*/
-
-  /* #endregion */
-
-  /* #region histCpras*/
-
-  /* #endregion */
-
-  /* #region accountForm*/
-
-  /* #endregion */
-}
-/* #endregion */
-.bodyCont {
-  margin: 5px;
-  /*background-color: rgb(0, 136, 255);*/
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  flex-direction: column;
-}
-.container {
-  margin: 10px 10px 10px 5px;
-  background-color: rgb(255, 0, 64);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  flex-direction: row;
-}
-
-.bodyCont p {
-  font-size: 10pt;
-  text-align: center;
-  width: 90%;
-}
-
-.itemDescription {
-  margin: 5;
-}
-.itemDescription Img {
-  width: 40%;
-  border: 1px solid black;
-
-  float: left;
-}
-.itemDesTxtDescription {
-  background-color: silver;
-  font-size: 12px 2px 2px 2px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-  margin-left: 60px;
-}
-
-.hisCprasImg {
-  width: 50px, 2px;
-  margin-left: 8px;
-}
-.hisCprasTxtDescription {
-  background-color: silver;
-  font-size: 12px 2px 2px 2px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-  margin-left: 60px;
-}
-.hisCprasBtn {
-  background-color: darkslateblue;
-  font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  margin: 0px 0px 0px 0px;
 }

@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./recursos/css/styles.css" />
+    <link rel="stylesheet" href="./recursos/css/index_style.css" />
   </head>
 
   <body class="container-fluid">
@@ -72,22 +73,52 @@
     </nav>
 
     <!--<main>-->
-
-    <div class="reelPromo">
-      <!-- <section id="reel">-->
-      <img src="" alt="Slider de Promociones" />
-      <!--en esta seccion ira un Slider con promociones -->
-      <iframe
-        width="100%"
-        height="100%"
-        src="https://www.youtube.com/embed/n-55YJpaDys"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      ></iframe>
-      <!--</section>-->
+    <section id="reel">
+      <div class="row justify-content-center">
+      <div class="col-10">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./recursos/img/matsConstruccion.jpg" class="d-block w-100" alt="matCons">
+            </div>
+            <div class="carousel-item">
+            <img src="./recursos/img/matsConstSeco.jpg" class="d-block w-100" alt="matsConsSeco">
+            </div>
+            <div class="carousel-item">
+            <img src="./recursos/img/Herramientas 3.jpg" class="d-block w-100" alt="herrElect">
+            </div>
+            <div class="carousel-item">
+            <img src="" class="d-block w-100" alt="">
+            <iframe 
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/n-55YJpaDys"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+          </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
       <hr />
-    </div>
+      </div>
+    </section>
+      
 
     <div class="whoWeAre">
       <!-- <section id="quienessomos"></section> -->
@@ -119,15 +150,14 @@
         <img src="./recursos/img/loc.png" alt="" />
         <hr />
       </div>
-</div>
-<div class="col-12 col-lg-6" >
-      <div class="frmContacto">
-        <section id="contacto">
-          <form>
+    </div>
+    <div class="col-12 col-lg-6" >
+      <section id="contacto">
+        <div class="frmContacto">       
+          <form class="p-2">
             <div>
               <h3>Contacto</h3>
             </div>
-
             <div>
               <input
                 class="frmContactoMail"
@@ -151,8 +181,7 @@
             </div>
           </form>
         </div>
-        </section>
-      </div>  
+      </section>
     </div>
 
     <!--</main>-->
