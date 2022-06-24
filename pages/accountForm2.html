@@ -15,50 +15,150 @@
     <link rel="stylesheet" href="../recursos/css/accountForm_style.css" />
   </head>
 
-  <body>
-    <header id="encabezado">
+  <body class="container-fluid">
+    <header class="encabezado">
       <img src="../recursos/img/encabezado.png" alt="Encabezado" />
     </header>
     <main>
-      <h2>Formulario Registro</h2>
-      <form action="./Log_index.html">
-        <br />
-        <fieldset>
-          <legend>Alta Cuenta</legend>
-          <label for="input_nombre">Nombre</label>
-          <input type="text" name="" id="input_nombre" size="30" /><br />
-          <label for="input_apellido">Apellido</label>
-          <input type="text" name="" id="input_apellido" size="20" /><br />
-          <label for="input_email">E-MAIL</label
-          ><input type="email" name="" id="input_email" size="40" /><br />
-          <label for="input_domicilio">Domicilio</label
-          ><input type="text" name="" id="input_domicilio" size="50" /> <br />
-          <label for="input_codpos">C.Postal</label
-          ><input type="text" name="" id="input_codpos" size="6" />
-          <label for="input_tel">Telefono</label
-          ><input type="tel" name="" id="input_tel" /><br />
-          <label for="input_pwd">Ingrese PassWord</label
-          ><input type="password" name="" id="input_pwd" /><br />
-          <label for="input_pwd2">Confirme PassWord</label>
-          <input type="password" name="" id="input_pwd2" /><br />
-          <label for="input_txtarea">Comentarios</label> <br />
-          <textarea
-            rows="10"
-            cols="40"
-            name="Comentarios"
-            id="input_txtarea"
-          ></textarea>
-          <br />
+      <h2 class="m-2">Formulario Registro</h2>
+      <div class="m-2 form-control">
+        <form action="../Index.html" class="row g-3">
+          <div class="col-md-8">
+            <label for="inputNombre1" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ingrese su Nombre"
+              id="inputNombre1"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="inputApellido1" class="form-label">Apellido</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ingrese su Apellido"
+              id="inputApellido1"
+            />
+          </div>
+          <div class="col-md-8">
+            <label for="inputEmail1" class="form-label">E-Mail</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Ingrese su E-Mail de Contacto"
+              id="inputEmail1"
+            />
+          </div>
 
-          <input type="submit" value="Enviar" />
-          <input type="reset" value="Reiniciar" />
-          <input
-            type="button"
-            onclick="location.href='./Log_index.html'"
-            value="Cancelar"
-          />
-        </fieldset>
-      </form>
+          <div class="col-md-6">
+            <label for="inputPassword1" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Ingrese Password"
+              id="inputPassword1"
+            />
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputPassword2" class="form-label">Confirmacion</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Confirme Password"
+              id="inputPassword2"
+            />
+          </div>
+
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Domicilio</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputAddress"
+              placeholder="Ingrese Domicilio"
+            />
+          </div>
+          <div class="col-2">
+            <label for="inputPiso" class="form-label">Piso</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputPiso"
+              placeholder="Piso"
+            />
+          </div>
+          <div class="col-2">
+            <label for="inputDto" class="form-label">Dto/Of</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputDto"
+              placeholder="Depto/Of"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Provincia</label>
+            <select id="inputCity" class="form-select">
+              <option selected>Seleccione Provincia...</option>
+              <option>...</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Localidad</label>
+            <select id="inputState" class="form-select">
+              <option selected>Seleccione Localidad...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Cod. Postal</label>
+            <input type="text" class="form-control" id="inputZip" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputTel" class="form-label">Telefono/Celular</label>
+            <input
+              type="tel"
+              placeholder="Ingrese un telefono o Celular de Contacto"
+              class="form-control"
+              id="inputTel"
+            />
+          </div>
+          <div class="col-md-12">
+            <label for="inputDet" class="form-label">Observaciones</label>
+            <textarea
+              cols="40"
+              rows="10"
+              placeholder="Ingrese un Comentario"
+              class="form-control"
+              name="Comentarios"
+              id="inputDet"
+            ></textarea>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck" />
+              <label class="form-check-label" for="gridCheck">
+                Confirme Alta
+              </label>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="reset" class="btn btn-primary">Borrar</button>
+            <button
+              type="button"
+              onclick="location.href='./Log_index.html'"
+              class="btn btn-primary"
+            >
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
     </main>
     <footer><--Este es el Footer--></footer>
     <script
