@@ -34,16 +34,48 @@
   color: black;
   text-decoration: none;
 }
-
-.carousel-item {
-  height: 40rem;
+.carousel-item img,
+.carousel-item iframe {
+  height: 10rem;
+  min-width: 16.24rem;
+  max-width: 16.25rem;
+  margin: auto;
 }
-.reelPromo {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+@media screen and (min-width: 576px) {
+  .carousel-item img,
+  .carousel-item iframe {
+    height: 16rem;
+    max-width: 24.38rem;
+  }
 }
-.reelpromo iframe {
+@media screen and (min-width: 768px) {
+  .carousel-item img,
+  .carousel-item iframe {
+    height: 22rem;
+    max-width: 32.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .carousel-item img,
+  .carousel-item iframe {
+    height: 34rem;
+    max-width: 48.75rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .carousel-item img .carousel-item iframe {
+    height: 46rem;
+    max-width: 74.75rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .carousel-item img .carousel-item iframe {
+    height: 80%;
+    max-width: 80%;
+  }
+}
+.carousel-item iframe {
+  margin: auto;
   padding: auto;
   max-height: -moz-fit-content;
   max-height: fit-content;

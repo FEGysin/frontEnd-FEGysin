@@ -11,6 +11,7 @@
   background-color: black;
   height: 90px;
 }
+
 .encabezado img {
   height: 90%;
 }
@@ -41,6 +42,7 @@
   width: 90%;
   background-color: rgba(76, 187, 214, 1);
 }
+
 .bodyCont {
   margin: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -52,13 +54,12 @@
 }
 .container {
   width: 100%;
-  /*margin: 10px 10px 10px 5px;
-  background-color: black;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex-direction: row;
 }
+
 /* #region Desktop*/
 @media screen and (min-width: 768px) {
   .encabezado {

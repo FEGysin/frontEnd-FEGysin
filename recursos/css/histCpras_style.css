@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+.card {
+  width: 18rem;
+}
+.card ul li {
+  font-size: 10pt;
+}
+
+@media screen and (min-width: 912px) {
+  .card {
+    width: 27rem;
+  }
+  .card ul li {
+    font-size: 14pt;
+  }
+}
