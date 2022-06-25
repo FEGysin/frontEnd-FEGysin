@@ -117,4 +117,8 @@
     text-align: center;
     margin: 0px 0px 0px 0px;
   }
+  .footer {
+    background-color: rgba(76, 187, 214, 1);
+    text-align: center;
+  }
 }
