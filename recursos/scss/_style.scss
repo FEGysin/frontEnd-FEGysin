@@ -1,0 +1,99 @@
+*   {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    $colorBase:black;
+    $colorSecundario:rgba(76, 187, 214,1);
+    
+
+.encabezado {
+    display: flex;
+    background-color: $colorBase;
+    height: 90px;
+    @media screen and (min-width: 768px) {
+        height: 120px;
+        padding-left: 1rem;
+        background-color: $colorBase;
+    }
+    img {
+        height: 90%;
+    }
+}  
+    
+
+.navBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color:$colorSecundario;
+    a {
+        text-decoration: none;
+        font-size: 9pt;
+        font-family: "Times New Roman", Times, serif;
+        display: inline-block;
+        color: black;
+        @media screen and (min-width: 768px) {
+            font-size: 14pt;
+        }
+    }
+    ul li{
+        text-decoration: none;
+        font-size: 9pt;
+        font-family: "Times New Roman", Times, serif;
+        display: inline-block;
+        color: black;
+        @media screen and (min-width: 768px) {
+            font-size: 14pt;
+        }
+        a {
+            text-decoration: none;
+            font-size: 9pt;
+            font-family: "Times New Roman", Times, serif;
+            display: inline-block;
+            color: black;
+            @media screen and (min-width: 768px) {
+                font-size: 14pt;
+            }
+        }
+    }
+}
+
+.bodyCont {
+    margin: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: black;
+    p {
+        font-size: 7pt;
+        text-align: center;
+        font-weight: bold;
+        width: 90%;
+        background-color: $colorSecundario;
+        @media screen and (min-width: 768px) {
+            font-size: 12pt;
+            text-align: center;
+            width: 90%;
+        }
+    }
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    @media screen and (min-width: 768px) {
+
+    }
+}
+.footer {
+    background-color: $colorSecundario;
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+@import"_style.scss";
+.hist_card {
+    width: 18rem;
+    @media screen and (min-width: 912px) {
+        width: 27rem;
+    }
+    .card-header{
+        background-color: $colorSecundario;
+    }
+    ul li {
+    font-size: 10pt;
+    @media screen and (min-width: 912px) {
+        font-size: 14pt;
+    }
+    }
+}

@@ -1,3 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.encabezado {
+  display: flex;
+  background-color: black;
+  height: 90px;
+}
+@media screen and (min-width: 768px) {
+  .encabezado {
+    height: 120px;
+    padding-left: 1rem;
+    background-color: black;
+  }
+}
+.encabezado img {
+  height: 90%;
+}
+
+.navBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgb(76, 187, 214);
+}
+.navBar a {
+  text-decoration: none;
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navBar a {
+    font-size: 14pt;
+  }
+}
+.navBar ul li {
+  text-decoration: none;
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navBar ul li {
+    font-size: 14pt;
+  }
+}
+.navBar ul li a {
+  text-decoration: none;
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navBar ul li a {
+    font-size: 14pt;
+  }
+}
+
+.bodyCont {
+  margin: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: black;
+}
+.bodyCont p {
+  font-size: 7pt;
+  text-align: center;
+  font-weight: bold;
+  width: 90%;
+  background-color: rgb(76, 187, 214);
+}
+@media screen and (min-width: 768px) {
+  .bodyCont p {
+    font-size: 12pt;
+    text-align: center;
+    width: 90%;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.footer {
+  background-color: rgb(76, 187, 214);
+  text-align: center;
+}
+
 .frmLogIn {
   display: flex;
   flex-direction: row;
@@ -6,47 +109,59 @@
 @media screen and (min-width: 768px) {
   .frmLogIn {
     background-color: black;
-    height: 110px;
+    height: 120px;
     width: 100%;
   }
 }
 .frmLogIn form img {
   position: relative;
-  width: 30px;
   border: 1px solid black;
   transition-delay: 700ms;
   transition-duration: 1s;
   filter: grayscale(100%);
   left: 130px;
+  border: 1px solid black;
+}
+.frmLogIn form .usrImg {
+  width: 50px;
+  -webkit-animation-name: neon_glow;
+          animation-name: neon_glow;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 @media screen and (min-width: 768px) {
-  .frmLogIn form img {
-    width: 30px;
-    border: 1px solid black;
+  .frmLogIn form .usrImg {
+    width: 70px;
   }
 }
-.frmLogIn form div .logUsr {
+.frmLogIn form .pwdImg {
+  width: 0%;
+  visibility: none;
+}
+.frmLogIn form .logUsr {
   opacity: 0;
-  font-size: 10pt;
+  font-size: 8pt;
   background-color: black;
+  width: 0px;
+  transition-duration: 2s;
 }
 @media screen and (min-width: 768px) {
-  .frmLogIn form div .logUsr {
-    width: 0px;
+  .frmLogIn form .logUsr {
     font-size: 10pt;
-    transition-duration: 2s;
   }
 }
-.frmLogIn form div .logPwd {
+.frmLogIn form .logPwd {
   opacity: 0;
-  font-size: 10pt;
+  font-size: 8pt;
   background-color: black;
+  width: 0px;
+  transition-duration: 2s;
 }
 @media screen and (min-width: 768px) {
-  .frmLogIn form div .logPwd {
-    width: 0px;
+  .frmLogIn form .logPwd {
     font-size: 10pt;
-    transition-duration: 2s;
   }
 }
 .frmLogIn form a {
@@ -54,11 +169,13 @@
   opacity: 0;
   color: black;
   text-decoration: none;
+  font-size: 7pt;
 }
 @media screen and (min-width: 768px) {
   .frmLogIn form a {
     color: white;
     text-decoration: none;
+    font-size: 10pt;
   }
 }
 .frmLogIn form:hover img {
@@ -66,6 +183,25 @@
   filter: grayscale(0%);
   left: 0px;
   transition-duration: 1s;
+}
+.frmLogIn form:hover .usrImg {
+  width: 20px;
+  -webkit-animation-name: none;
+          animation-name: none;
+}
+@media screen and (min-width: 768px) {
+  .frmLogIn form:hover .usrImg {
+    width: 30px;
+  }
+}
+.frmLogIn form:hover .pwdImg {
+  visibility: visible;
+  width: 20px;
+}
+@media screen and (min-width: 768px) {
+  .frmLogIn form:hover .pwdImg {
+    width: 30px;
+  }
 }
 .frmLogIn form:hover .logUsr {
   transition-delay: 100ms;
@@ -85,4 +221,666 @@
   opacity: 1;
   transition-delay: 1s;
   transition-duration: 2s;
+}
+
+.carousel-item img {
+  height: 10rem;
+  min-width: 16.24rem;
+  max-width: 16.25rem;
+  margin: auto;
+}
+@media screen and (min-width: 576px) {
+  .carousel-item img {
+    height: 16rem;
+    max-width: 24.38rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .carousel-item img {
+    height: 22rem;
+    max-width: 32.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .carousel-item img {
+    height: 34rem;
+    max-width: 48.75rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .carousel-item img {
+    height: 46rem;
+    max-width: 74.75rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .carousel-item img {
+    height: 80%;
+    max-width: 80%;
+  }
+}
+.carousel-item iframe {
+  height: 10rem;
+  min-width: 16.24rem;
+  max-width: 16.25rem;
+  margin: auto;
+  margin: auto;
+  padding: auto;
+  max-height: -moz-fit-content;
+  max-height: -webkit-fit-content;
+  max-height: fit-content;
+}
+@media screen and (min-width: 576px) {
+  .carousel-item iframe {
+    height: 16rem;
+    max-width: 24.38rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .carousel-item iframe {
+    height: 22rem;
+    max-width: 32.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .carousel-item iframe {
+    height: 34rem;
+    max-width: 48.75rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .carousel-item iframe {
+    height: 46rem;
+    max-width: 74.75rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .carousel-item iframe {
+    height: 80%;
+    max-width: 80%;
+  }
+}
+
+.whoWeAre {
+  display: flex;
+  flex-direction: column;
+  font-family: "Times New Roman", Times, serif;
+  color: black;
+  font-size: 10pt;
+}
+@media screen and (min-width: 768px) {
+  .whoWeAre p {
+    font-size: 14pt;
+  }
+}
+
+.ubicacion {
+  display: flex;
+  flex-direction: column;
+}
+
+.frmContacto {
+  margin-left: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.frmContactoMail {
+  margin: 2px;
+  width: 99%;
+}
+
+.frmContactoTextbox {
+  margin: 2px;
+  width: 99%;
+}
+
+.frmContactoBtn {
+  margin-left: 60%;
+}
+@media screen and (min-width: 768px) {
+  .frmContactoBtn {
+    margin-left: 75%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.encabezado {
+  display: flex;
+  background-color: black;
+  height: 90px;
+}
+@media screen and (min-width: 768px) {
+  .encabezado {
+    height: 120px;
+    padding-left: 1rem;
+    background-color: black;
+  }
+}
+.encabezado img {
+  height: 90%;
+}
+
+.navBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgb(76, 187, 214);
+}
+.navBar a {
+  text-decoration: none;
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navBar a {
+    font-size: 14pt;
+  }
+}
+.navBar ul li {
+  text-decoration: none;
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navBar ul li {
+    font-size: 14pt;
+  }
+}
+.navBar ul li a {
+  text-decoration: none;
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navBar ul li a {
+    font-size: 14pt;
+  }
+}
+
+.bodyCont {
+  margin: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: black;
+}
+.bodyCont p {
+  font-size: 7pt;
+  text-align: center;
+  font-weight: bold;
+  width: 90%;
+  background-color: rgb(76, 187, 214);
+}
+@media screen and (min-width: 768px) {
+  .bodyCont p {
+    font-size: 12pt;
+    text-align: center;
+    width: 90%;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.footer {
+  background-color: rgb(76, 187, 214);
+  text-align: center;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+
+.bd-placeholder-img-lg {
+  font-size: 3.5rem;
+}
+
+.btn {
+  font-size: 9pt;
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 16pt;
+  }
+}
+
+.btn-toggle-nav li {
+  font-size: 8pt;
+  margin-left: 5%;
+}
+@media screen and (min-width: 768px) {
+  .btn-toggle-nav li {
+    font-size: 14pt;
+    margin-left: 5%;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1), inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prod_bodyCont p {
+  font-size: 8pt;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  background-color: rgb(76, 187, 214);
+}
+@media screen and (min-width: 768px) {
+  .prod_bodyCont p {
+    font-size: 10pt;
+  }
+}
+
+.prod_card {
+  width: 200px;
+}
+@media screen and (min-width: 768px) {
+  .prod_card {
+    width: 300px;
+  }
+}
+.prod_card .card-body p {
+  font-size: 8pt;
+  background-color: rgb(224, 224, 231);
+}
+@media screen and (min-width: 768px) {
+  .prod_card .card-body p {
+    font-size: 10pt;
+    background-color: rgb(224, 224, 231);
+  }
+}
+.prod_card .card-body .img-fluid {
+  width: 40%;
+}
+.prod_card .card-body .btn {
+  height: 2.2rem;
+  width: 8rem;
+  margin-left: 10%;
+  /*img {
+      height: 1.5rem;
+      margin-bottom: 5px;
+  }*/
+}
+@media screen and (min-width: 768px) {
+  .prod_card .card-body .btn {
+    height: 3rem;
+    margin-left: 10%;
+  }
+}
+.prod_card .card-body .btn .btnImg {
+  transition-duration: 0.75s;
+  height: 1.8rem;
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  .prod_card .card-body .btn .btnImg {
+    height: 2.1rem;
+  }
+}
+.prod_card .card-body .btn .btnImg2 {
+  transition-duration: 0.75s;
+  height: 0%;
+  visibility: hidden;
+}
+.prod_card .card-body .btn:focus .btn {
+  width: 1.8rem;
+}
+@media screen and (min-width: 768px) {
+  .prod_card .card-body .btn:focus .btn {
+    width: 2.1rem;
+  }
+}
+.prod_card .card-body .btn:focus .btnImg2 {
+  transition-duration: 0.75s;
+  height: 1.8rem;
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  .prod_card .card-body .btn:focus .btnImg2 {
+    height: 2.1rem;
+    width: 2.1rem;
+  }
+}
+.prod_card .card-body .btn:focus .btnImg {
+  transition-duration: 0.75s;
+  width: 0%;
+  visibility: hidden;
+}
+.prod_card:hover {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  position: relative;
+  top: -3px;
+  right: 3px;
+  -webkit-animation-name: neon_glow;
+          animation-name: neon_glow;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  /*box-shadow: 4px 4px 6px $colorSecundario;*/
+}
+
+.prod_itemContainer {
+  border: 1px solid black;
+  background-color: aliceblue;
+  width: 200px;
+}
+
+.mycart_navBar {
+  justify-content: space-evenly;
+}
+
+.mycart_card .card-body p {
+  font-size: 9pt;
+}
+
+.mycart_bodyCont p {
+  font-size: 7pt;
+  text-align: center;
+  font-weight: bold;
+  width: 90%;
+  background-color: rgb(224, 224, 231);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.encabezado {
+  display: flex;
+  background-color: black;
+  height: 90px;
+}
+@media screen and (min-width: 768px) {
+  .encabezado {
+    height: 120px;
+    padding-left: 1rem;
+    background-color: black;
+  }
+}
+.encabezado img {
+  height: 90%;
+}
+
+.navBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgb(76, 187, 214);
+}
+.navBar a {
+  text-decoration: none;
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navBar a {
+    font-size: 14pt;
+  }
+}
+.navBar ul li {
+  text-decoration: none;
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navBar ul li {
+    font-size: 14pt;
+  }
+}
+.navBar ul li a {
+  text-decoration: none;
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navBar ul li a {
+    font-size: 14pt;
+  }
+}
+
+.bodyCont {
+  margin: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: black;
+}
+.bodyCont p {
+  font-size: 7pt;
+  text-align: center;
+  font-weight: bold;
+  width: 90%;
+  background-color: rgb(76, 187, 214);
+}
+@media screen and (min-width: 768px) {
+  .bodyCont p {
+    font-size: 12pt;
+    text-align: center;
+    width: 90%;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.footer {
+  background-color: rgb(76, 187, 214);
+  text-align: center;
+}
+
+.hist_card {
+  width: 18rem;
+}
+@media screen and (min-width: 912px) {
+  .hist_card {
+    width: 27rem;
+  }
+}
+.hist_card .card-header {
+  background-color: rgb(76, 187, 214);
+}
+.hist_card ul li {
+  font-size: 10pt;
+}
+@media screen and (min-width: 912px) {
+  .hist_card ul li {
+    font-size: 14pt;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.encabezado {
+  display: flex;
+  background-color: black;
+  height: 90px;
+}
+@media screen and (min-width: 768px) {
+  .encabezado {
+    height: 120px;
+    padding-left: 1rem;
+    background-color: black;
+  }
+}
+.encabezado img {
+  height: 90%;
+}
+
+.navBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgb(76, 187, 214);
+}
+.navBar a {
+  text-decoration: none;
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navBar a {
+    font-size: 14pt;
+  }
+}
+.navBar ul li {
+  text-decoration: none;
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navBar ul li {
+    font-size: 14pt;
+  }
+}
+.navBar ul li a {
+  text-decoration: none;
+  font-size: 9pt;
+  font-family: "Times New Roman", Times, serif;
+  display: inline-block;
+  color: black;
+}
+@media screen and (min-width: 768px) {
+  .navBar ul li a {
+    font-size: 14pt;
+  }
+}
+
+.bodyCont {
+  margin: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: black;
+}
+.bodyCont p {
+  font-size: 7pt;
+  text-align: center;
+  font-weight: bold;
+  width: 90%;
+  background-color: rgb(76, 187, 214);
+}
+@media screen and (min-width: 768px) {
+  .bodyCont p {
+    font-size: 12pt;
+    text-align: center;
+    width: 90%;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.footer {
+  background-color: rgb(76, 187, 214);
+  text-align: center;
+}
+
+.mainBody {
+  background-color: rgb(76, 187, 214);
+}
+
+.form-control {
+  background-color: black;
+  color: white;
+}
+
+.form-select {
+  background-color: black;
+  color: white;
 }/*# sourceMappingURL=main.css.map */
