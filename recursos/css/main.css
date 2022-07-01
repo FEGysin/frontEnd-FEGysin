@@ -517,7 +517,7 @@
   overflow-x: auto;
   text-align: center;
   white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+  /*-webkit-overflow-scrolling: touch;*/
 }
 
 .prod_bodyCont p {
