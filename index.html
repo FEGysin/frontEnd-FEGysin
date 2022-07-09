@@ -15,17 +15,22 @@
     <link rel="stylesheet" href="./recursos/css/styles.css" />
     <!--<link rel="stylesheet" href="./recursos/css/index_style.css" />-->
     <link rel="stylesheet" href="./recursos/css/main.css" />
+    <link rel="stylesheet" href="./recursos/css/index_style.css" />
+
+
+
   </head>
 
-  <body class="container-fluid">
+  <body class="container-fluid bg-black">
     <div class="row my-2">
-      <div class="col-12 col-md-8 col-lg-9 p-0 mt-1">
+      <div class="col-6 col-md-8 col-lg-9 p-0 mt-1">
         <header class="encabezado">
-          <img src="./recursos/img/encabezado.png" alt="Encabezado" />
+          <a href="./index.html">
+          </a><img src="./recursos/img/encabezado.png" alt="Encabezado" /></a>
         </header>
       </div>
-      <div class="col-12 col-md-4 col-lg-3 p-0 mt-1">
-        <div class="frmLogIn p-3">
+      <div class="col-6 col-md-4 col-lg-3 p-0 mt-1">
+        <div class="frmLogIn p-1">
           <form>
             <div>
               <img class="usrImg" src="./recursos/img/usrColor.png" alt="" />
@@ -59,35 +64,149 @@
       </div>
     </div>
 
-    <nav class="navBar">
-      <ul>
-        <li>
-          <a href="./index.html"> Home</a>
-        </li>
-        <li>
-          <a href="#reel"> Reel</a>
-        </li>
-        <li>
-          <a href="#quienessomos">Quienes Somos</a>
-        </li>
-        <li>
-          <a href="#contacto">Contacto</a>
-        </li>
-      </ul>
+
+    <nav
+      class="navBar navbar-dark bg-dark sticky-top"
+      aria-label="Dark offcanvas navbar"
+    >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbarDark"
+          aria-controls="offcanvasNavbarDark"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-start text-white bg-dark"
+          tabindex="-1"
+          id="offcanvasNavbarDark"
+          aria-labelledby="offcanvasNavbarDarkLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item active">
+                <a href="../index.html" class="nav-link" aria-current="page">
+                  <svg class="bi pe-none me-2" width="20" height="20">
+                    <use xlink:href="#home" />
+                  </svg>
+                  HOME
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="./log_index.html"
+                  class="nav-link"
+                  aria-current="page"
+                >
+                  <svg class="bi pe-none me-2" width="20" height="20">
+                    <use xlink:href="#grid" />
+                  </svg>
+                  VENTAS
+                </a>
+              </li>
+            </ul>
+
+<!--Menu Usuario-->>
+            <ul class="list-unstyled ps-0">
+              <li class="border-top my-2"></li>
+              <li class="mb-1">
+                <button
+                  class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#account-collapse"
+                  aria-expanded="false"
+                >
+                  Menu Usuario
+                </button>
+                <div class="collapse" id="account-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li class="nav-item">
+                      <a
+                        href="./accountForm2.html"
+                        class="nav-link"
+                        aria-current="page"
+                      >
+                        <svg class="bi pe-none me-2" width="20" height="20">
+                          <use xlink:href="#people-circle" />
+                        </svg>
+                        Mis Datos
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="./histCompras.html"
+                        class="nav-link"
+                        aria-current="page"
+                      >
+                        <svg class="bi pe-none me-2" width="20" height="20">
+                          <use xlink:href="#calendar3" />
+                        </svg>
+                        Mis Compras
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="./mycart.html"
+                        class="nav-link"
+                        aria-current="page"
+                      >
+                        <img
+                          class="bi pe-none me-2"
+                          src="../recursos/img/Added.png" alt=""
+                          width="20"
+                          height="20"
+                        ></img>
+                        Carrito
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="../index.html"
+                        class="nav-link"
+                        aria-current="page"
+                      >
+                        <svg class="bi pe-none me-2" width="20" height="20">
+                          <use xlink:href="#chevron-right" />
+                        </svg>
+                        SALIR
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <!--<main>-->
     <section id="reel">
-      <div class="row justify-content-center">
+      <div class="reel row justify-content-center">
         <div class="col-10">
           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
-            <div class="carousel-inner align-content-center">
+
+            <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="./recursos/img/matsConstruccion.jpg" class="d-block w-100" alt="matCons">
               </div>
@@ -121,9 +240,20 @@
         <hr />
       </div>
     </section>
-      
 
-    <div class="whoWeAre">
+      <div class="envFpag row flex-wrap justify-content-center bg-white mb-2">
+        <div class="col-2">
+          <img src="./recursos/img/envios.png" alt="Envios a Domicilio">
+        </div>
+        <div class="col-4">
+          <img src="./recursos/img/fPago.jpg" alt="Formas de Pago">
+        </div>
+        <div class="col-2">
+          <img src="./recursos/img/estadoEnvio.png" alt="Estado de Envio">
+        </div>
+      </div>
+
+      <div class="whoWeAre">
       <section id="quienessomos">
       <h2>Quienes Somos</h2>
       <!--En esta Seccion iran los Detalles de la Empresa-->

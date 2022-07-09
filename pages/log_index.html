@@ -6,343 +6,722 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documennavt</title>
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-    crossorigin="anonymous"
-  />
-  <link rel="stylesheet" href="../recursos/css/styles.css" />
-  <!--<link rel="stylesheet" href="../recursos/css/log_index_style.css" />-->
-  <link rel="stylesheet" href="../recursos/css/main.css" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../recursos/css/styles.css" />
+    <!--<link rel="stylesheet" href="../recursos/css/log_index_style.css" />-->
+    <link rel="stylesheet" href="../recursos/css/main.css" />
   </head>
 
   <body class="container-fluid bg-black">
-      <header class="encabezado">
-        <img src="../recursos/img/encabezado.png" alt="Encabezado" />
-      </header>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="home" viewBox="0 0 16 16">
+        <path
+          d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"
+        />
+      </symbol>
+      <symbol id="table" viewBox="0 0 16 16">
+        <path
+          d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"
+        />
+      </symbol>
+      <symbol id="people-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+        <path
+          fill-rule="evenodd"
+          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+        />
+      </symbol>
+      <symbol id="grid" viewBox="0 0 16 16">
+        <path
+          d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"
+        />
+      </symbol>
+      <symbol id="calendar3" viewBox="0 0 16 16">
+        <path
+          d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"
+        />
+        <path
+          d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+        />
+      </symbol>
+      <symbol id="chevron-right" viewBox="0 0 16 16">
+        <path
+          fill-rule="evenodd"
+          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+        />
+      </symbol>
+      <symbol id="geo-fill" viewBox="0 0 16 16">
+        <path
+          fill-rule="evenodd"
+          d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"
+        />
+      </symbol>
+    </svg>
+
+    <header class="encabezado">
+      <a href="../index.html">
+        <img src="../recursos/img/encabezado.png" alt="Encabezado"
+      /></a>
+    </header>
+
+    <nav
+      class="navBar navbar-dark bg-dark sticky-top"
+      aria-label="Dark offcanvas navbar"
+    >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbarDark"
+          aria-controls="offcanvasNavbarDark"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-start text-white bg-dark"
+          tabindex="-1"
+          id="offcanvasNavbarDark"
+          aria-labelledby="offcanvasNavbarDarkLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link" aria-current="page">
+                  <svg class="bi pe-none me-2" width="20" height="20">
+                    <use xlink:href="#home" />
+                  </svg>
+                  HOME
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="./log_index.html"
+                  class="nav-link active"
+                  aria-current="page"
+                >
+                  <svg class="bi pe-none me-2" width="20" height="20">
+                    <use xlink:href="#grid" />
+                  </svg>
+                  VENTAS
+                </a>
+              </li>
+            </ul>
 
 
-    <div class="row justify-content-between flex-wrap bg-black">
-      <div class="col-4 col-lg-3">
-        <div class="flex-shrink-0 sticky-top p-1 text-white bg-black" style="width: 95%;">
-          <a href="/" class="d-flex align-items-center pb-3 mb-3 link-light text-decoration-none border-bottom">
-            <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-            <span class="fs-3 fw-semibold">Menu</span>
-          </a>
-          <ul class="list-unstyled ps-0">
-            <li class="mb-1">
-              <button class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#productos-collapse" aria-expanded="true">
-                Productos
-              </button>
-              <div class="collapse show" id="productos-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#prod_cons_cons" class="link-light d-inline-flex text-decoration-none rounded">Construccion</a></li>
-                  <li><a href="#prod_cons_seco" class="link-light d-inline-flex text-decoration-none rounded">Construccion en Seco</a></li>
-                  <li><a href="#prod_cons_plomeria" class="link-light d-inline-flex text-decoration-none rounded">Plomeria</a></li>
-                  <li><a href="#prod_cons_gas" class="link-light d-inline-flex text-decoration-none rounded">Gas</a></li>
-                  <li><a href="#prod_cons_electricidad" class="link-light d-inline-flex text-decoration-none rounded">Electricidad</a></li>
-                </ul>
-              </div>
-            </li>
-          
-            <li class="mb-1">
-              <button class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#herramientas-collapse" aria-expanded="false">
-                Herramientas
-              </button>
-              <div class="collapse" id="herramientas-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#prod_herr_destornilladores" class="link-light d-inline-flex text-decoration-none rounded">Destornilladores</a></li>
-                  <li><a href="#prod_herr_martillos" class="link-light d-inline-flex text-decoration-none rounded">Martillos</a></li>
-                  <li><a href="#prod_herr_cortafierros" class="link-light d-inline-flex text-decoration-none rounded">Cortafierros</a></li>
-                  <li class="mb-1">
-                    <button class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#perforadoras-collapse" aria-expanded="false">
-                      Perforadoras
-                    </button>
-                    <div class="collapse" id="perforadoras-collapse">
-                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Rotopercutoras</a></li>
-                        <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Perforadoras Manuales</a></li>
-                        <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Perforadoras de Banco</a></li>
-                      </ul>
-                    </div>
-                  </li> 
-
-                  <li class="mb-1">
-                    <button class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#amoladoras-collapse" aria-expanded="false">
-                      Amoladoras
-                    </button>
-                      <div class="collapse" id="amoladoras-collapse">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                          <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Amoladoras de Banco</a></li>
-                          <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Amoladoras Angulares</a></li>
-                        </ul>
-                    </div>
-                  </li>  
-
-                  <li><a href="#prod_herr_mezcladoras" class="link-light d-inline-flex text-decoration-none rounded">Mezcladoras</a></li>
-                  
-                  <li class="mb-1">
-                    <button class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#sierras-collapse" aria-expanded="false">
-                    Sierras
-                    </button>
-                    <div class="collapse" id="sierras-collapse">
-                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Sierras Manuales</a></li>
-                        <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Sierras de Banco</a></li>
-                        <li><a href="#" class="link-light d-inline-flex text-decoration-none rounded">Caladoras</a></li>
-                      </ul>
-                    </div>
-                  </li>
-
-                  <li><a href="#prod_herr_hidrolavadoras" class="link-light d-inline-flex text-decoration-none rounded">Hidro-Lavadoras</a></li>
-                  <li><a href="#prod_herr_compresores" class="link-light d-inline-flex text-decoration-none rounded">Compresores de Aire</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="mb-1">
-              <button class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#ferreteria-collapse" aria-expanded="false">
-                Ferreteria
-              </button>
-              <div class="collapse" id="ferreteria-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                      <li><a href="#prod_ferr" class="link-light d-inline-flex text-decoration-none rounded">Ferreteria</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="mb-1">
-              <button class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#servicios-collapse" aria-expanded="false">
-                Servicios
-              </button>
-              <div class="collapse" id="servicios-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                      <li><a href="#serv" class="link-light d-inline-flex text-decoration-none rounded">Servicios</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="border-top my-3"></li>
+<!--Menu Ventas-->
+            <ul class="list-unstyled ps-0">
+              <li class="border-top my-1"></li>
               <li class="mb-1">
-              <button class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-                Menu Usuario
-              </button>
-              <div class="collapse" id="account-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="./accountForm2.html" class="link-light d-inline-flex text-decoration-none rounded">Mis Datos</a></li>
-                  <li><a href="./histCompras.html" class="link-light d-inline-flex text-decoration-none rounded">Mis Compras</a></li>   
-                  <li><a href="./mycart.html" class="link-light d-inline-flex text-decoration-none rounded">Carrito</a></li>
-                  <li><a href="../index.html" class="link-light d-inline-flex text-decoration-none rounded">Salir</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+                <button
+                  class="btn btn-toggle nav-item text-white d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#productos-collapse"
+                  aria-expanded="false"
+                >
+                  Productos
+                </button>
+                <div class="collapse" id="productos-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <a
+                        href="#prod_cons_cons"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Construccion</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#prod_cons_seco"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Construccion en Seco</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#prod_cons_plomeria"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Plomeria</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#prod_cons_gas"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Gas</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#prod_cons_electricidad"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Electricidad</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="border-top my-1"></li>
+              <li class="mb-1">
+                <button
+                  class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#herramientas-collapse"
+                  aria-expanded="false"
+                >
+                  Herramientas
+                </button>
+                <div class="collapse" id="herramientas-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <a
+                        href="#prod_herr_destornilladores"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Destornilladores</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#prod_herr_martillos"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Martillos</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#prod_herr_cortafierros"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Cortafierros</a
+                      >
+                    </li>
+                    <li class="mb-1">
+                      <button
+                        class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#perforadoras-collapse"
+                        aria-expanded="false"
+                      >
+                        Perforadoras
+                      </button>
+                      <div class="collapse" id="perforadoras-collapse">
+                        <ul
+                          class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="link-light d-inline-flex text-decoration-none rounded"
+                              >Rotopercutoras</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="link-light d-inline-flex text-decoration-none rounded"
+                              >Perforadoras Manuales</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="link-light d-inline-flex text-decoration-none rounded"
+                              >Perforadoras de Banco</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="mb-1">
+                      <button
+                        class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#amoladoras-collapse"
+                        aria-expanded="false"
+                      >
+                        Amoladoras
+                      </button>
+                      <div class="collapse" id="amoladoras-collapse">
+                        <ul
+                          class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="link-light d-inline-flex text-decoration-none rounded"
+                              >Amoladoras de Banco</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="link-light d-inline-flex text-decoration-none rounded"
+                              >Amoladoras Angulares</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        href="#prod_herr_mezcladoras"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Mezcladoras</a
+                      >
+                    </li>
+                    <li class="mb-1">
+                      <button
+                        class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#sierras-collapse"
+                        aria-expanded="false"
+                      >
+                        Sierras
+                      </button>
+                      <div class="collapse" id="sierras-collapse">
+                        <ul
+                          class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="link-light d-inline-flex text-decoration-none rounded"
+                              >Sierras Manuales</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="link-light d-inline-flex text-decoration-none rounded"
+                              >Sierras de Banco</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="link-light d-inline-flex text-decoration-none rounded"
+                              >Caladoras</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        href="#prod_herr_hidrolavadoras"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Hidro-Lavadoras</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#prod_herr_compresores"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Compresores de Aire</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="border-top my-1"></li>
+              <li class="mb-1">
+                <button
+                  class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#ferreteria-collapse"
+                  aria-expanded="false"
+                >
+                  Ferreteria
+                </button>
+                <div class="collapse" id="ferreteria-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <a
+                        href="#prod_ferr"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Ferreteria</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="border-top my-1"></li>
+              <li class="mb-1">
+                <button
+                  class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#servicios-collapse"
+                  aria-expanded="false"
+                >
+                  Servicios
+                </button>
+                <div class="collapse" id="servicios-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                      <a
+                        href="#serv"
+                        class="link-light d-inline-flex text-decoration-none rounded"
+                        >Servicios</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+
+<!--Menu Usuario-->>
+            <ul class="list-unstyled ps-0">
+              <li class="border-top my-2"></li>
+              <li class="mb-1">
+                <button
+                  class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#account-collapse"
+                  aria-expanded="false"
+                >
+                  Menu Usuario
+                </button>
+                <div class="collapse" id="account-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li class="nav-item">
+                      <a
+                        href="./accountForm2.html"
+                        class="nav-link"
+                        aria-current="page"
+                      >
+                        <svg class="bi pe-none me-2" width="20" height="20">
+                          <use xlink:href="#people-circle" />
+                        </svg>
+                        Mis Datos
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="./histCompras.html"
+                        class="nav-link"
+                        aria-current="page"
+                      >
+                        <svg class="bi pe-none me-2" width="20" height="20">
+                          <use xlink:href="#calendar3" />
+                        </svg>
+                        Mis Compras
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="./mycart.html"
+                        class="nav-link"
+                        aria-current="page"
+                      >
+                        <img
+                          class="bi pe-none me-2"
+                          src="../recursos/img/Added.png" alt=""
+                          width="20"
+                          height="20"
+                        ></img>
+                        Carrito
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="../index.html"
+                        class="nav-link"
+                        aria-current="page"
+                      >
+                        <svg class="bi pe-none me-2" width="20" height="20">
+                          <use xlink:href="#chevron-right" />
+                        </svg>
+                        SALIR
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+    </nav>
 
-      <div class ="col-8 col-lg-9">
+    <div class="row justify-content-evenly flex-wrap bg-black">
+      <div class="col-10 col-lg-9">
         <div class="prod_bodyCont">
-          <section id="prod"><p><--Productos--></p>
-          </section>
+          <section id="prod"><p><--Productos--></p></section>
 
-          <section id="prod_cons"><p><-- Seccion Construccion --></p>
-          </section>
+          <section id="prod_cons"><p><-- Seccion Construccion --></p></section>
 
-          <section id="prod_cons_cons"><p><-- Materiales de Construccion --></p>
-            
-              <div class="container">
-                <div class="card prod_card m-2"
-                >
-                  <div class="row g-0 justify-content-center">
-                    <div class="col-md-6">
-                      <img
-                        src="../recursos/img/cemento1.jpg"
-                        class="img-fluid rounded-start"
-                        alt="Cemento"
-                      />
-                    </div>
-                    <div class="col-10 col-md-11">
-                      <div class="card-body p-1">
-                        <h6 class="card-title">Cemento</h6>
-                        <p class="card-text m-2">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                          Sequi expedita ipsam debitis reiciendis nemo iste id
-                          nostrum, voluptas praesentium inventore ad, maiores aliquid!
-                          Perferendis asperiores vel incidunt vero, non explicabo?
-                        </p>
-                        <p class="card-text text-black m-2 itemPrice text-center">$ 99.999.999.99</p>
-                        <div class="row justify-content-center">
-                          <a href="#" class="btn">
-                            <img class="btnImg" src="../recursos/img/add.png" alt="Agregar" />
-                            <img class="btnImg2" src="../recursos/img/added.png" alt="Agregar" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+          <section id="prod_cons_cons">
+            <p><-- Materiales de Construccion --></p>
+
+            <div class="container">
+              <div class="card prod_card m-2">
+                <div class="row g-0 justify-content-center">
+                  <div class="col-md-6">
+                    <img
+                      src="../recursos/img/cemento1.jpg"
+                      class="img-fluid rounded-start"
+                      alt="Cemento"
+                    />
                   </div>
-                </div>
-                <div class="card prod_card m-2"
-                >
-                  <div class="row g-0 justify-content-center">
-                    <div class="col-md-6">
-                      <img
-                        src="../recursos/img/cemento1.jpg"
-                        class="img-fluid rounded-start"
-                        alt="Cemento"
-                      />
-                    </div>
-                    <div class="col-10 col-md-11">
-                      <div class="card-body p-1">
-                        <h6 class="card-title">Cemento</h6>
-                        <p class="card-text m-2">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                          Sequi expedita ipsam debitis reiciendis nemo iste id
-                          nostrum, voluptas praesentium inventore ad, maiores aliquid!
-                          Perferendis asperiores vel incidunt vero, non explicabo?
-                        </p>
-                        <p class="card-text text-black m-2 itemPrice text-center">$ 99.999.999.99</p>
-                        <div class="row justify-content-center">
-                          <a href="#" class="btn">
-                            <img class="btnImg" src="../recursos/img/add.png" alt="Agregar" />
-                            <img class="btnImg2" src="../recursos/img/added.png" alt="Agregar" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card prod_card m-2"
-                >
-                  <div class="row g-0 justify-content-center">
-                    <div class="col-md-6">
-                      <img
-                        src="../recursos/img/cemento1.jpg"
-                        class="img-fluid rounded-start"
-                        alt="Cemento"
-                      />
-                    </div>
-                    <div class="col-10 col-md-11">
-                      <div class="card-body p-1">
-                        <h6 class="card-title">Cemento</h6>
-                        <p class="card-text m-2">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                          Sequi expedita ipsam debitis reiciendis nemo iste id
-                          nostrum, voluptas praesentium inventore ad, maiores aliquid!
-                          Perferendis asperiores vel incidunt vero, non explicabo?
-                        </p>
-                        <p class="card-text text-black m-2 itemPrice text-center">$ 99.999.999.99</p>
-                        <div class="row justify-content-center">
-                          <a href="#" class="btn">
-                            <img class="btnImg" src="../recursos/img/add.png" alt="Agregar" />
-                            <img class="btnImg2" src="../recursos/img/added.png" alt="Agregar" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card prod_card m-2"
-                >
-                  <div class="row g-0 justify-content-center">
-                    <div class="col-md-6">
-                      <img
-                        src="../recursos/img/cemento1.jpg"
-                        class="img-fluid rounded-start"
-                        alt="Cemento"
-                      />
-                    </div>
-                    <div class="col-10 col-md-11">
-                      <div class="card-body p-1">
-                        <h6 class="card-title">Cemento</h6>
-                        <p class="card-text m-2">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                          Sequi expedita ipsam debitis reiciendis nemo iste id
-                          nostrum, voluptas praesentium inventore ad, maiores aliquid!
-                          Perferendis asperiores vel incidunt vero, non explicabo?
-                        </p>
-                        <p class="card-text text-black m-2 itemPrice text-center">$ 99.999.999.99</p>
-                        <div class="row justify-content-center">
-                          <a href="#" class="btn">
-                            <img class="btnImg" src="../recursos/img/add.png" alt="Agregar" />
-                            <img class="btnImg2" src="../recursos/img/added.png" alt="Agregar" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card prod_card m-2"
-                >
-                  <div class="row g-0 justify-content-center">
-                    <div class="col-md-6">
-                      <img
-                        src="../recursos/img/cemento1.jpg"
-                        class="img-fluid rounded-start"
-                        alt="Cemento"
-                      />
-                    </div>
-                    <div class="col-10 col-md-11">
-                      <div class="card-body p-1">
-                        <h6 class="card-title">Cemento</h6>
-                        <p class="card-text m-2">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                          Sequi expedita ipsam debitis reiciendis nemo iste id
-                          nostrum, voluptas praesentium inventore ad, maiores aliquid!
-                          Perferendis asperiores vel incidunt vero, non explicabo?
-                        </p>
-                        <p class="card-text text-black m-2 itemPrice text-center">$ 99.999.999.99</p>
-                        <div class="row justify-content-center">
-                          <a href="#" class="btn">
-                            <img class="btnImg" src="../recursos/img/add.png" alt="Agregar" />
-                            <img class="btnImg2" src="../recursos/img/added.png" alt="Agregar" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card prod_card m-2"
-                >
-                  <div class="row g-0 justify-content-center">
-                    <div class="col-md-6">
-                      <img
-                        src="../recursos/img/cemento1.jpg"
-                        class="img-fluid rounded-start"
-                        alt="Cemento"
-                      />
-                    </div>
-                    <div class="col-10 col-md-11">
-                      <div class="card-body p-1">
-                        <h6 class="card-title">Cemento</h6>
-                        <p class="card-text m-2">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                          Sequi expedita ipsam debitis reiciendis nemo iste id
-                          nostrum, voluptas praesentium inventore ad, maiores aliquid!
-                          Perferendis asperiores vel incidunt vero, non explicabo?
-                        </p>
-                        <p class="card-text text-black m-2 itemPrice text-center">$ 99.999.999.99</p>
-                        <div class="row justify-content-center">
-                          <a href="#" class="btn">
-                            <img class="btnImg" src="../recursos/img/add.png" alt="Agregar" />
-                            <img class="btnImg2" src="../recursos/img/added.png" alt="Agregar" />
-                          </a>
-                        </div>    
+                  <div class="col-10 col-md-11">
+                    <div class="card-body p-1">
+                      <h6 class="card-title">Cemento</h6>
+                      <p class="card-text m-2">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Sequi expedita ipsam debitis reiciendis nemo iste
+                        id nostrum, voluptas praesentium inventore ad, maiores
+                        aliquid! Perferendis asperiores vel incidunt vero, non
+                        explicabo?
+                      </p>
+                      <p class="card-text text-black m-2 itemPrice text-center">
+                        $ 99.999.999.99
+                      </p>
+                      <div class="row justify-content-center">
+                        <a href="#" class="btn">
+                          <img
+                            class="btnImg"
+                            src="../recursos/img/add.png"
+                            alt="Agregar"
+                          />
+                          <img
+                            class="btnImg2"
+                            src="../recursos/img/added.png"
+                            alt="Agregar"
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="card prod_card m-2">
+                <div class="row g-0 justify-content-center">
+                  <div class="col-md-6">
+                    <img
+                      src="../recursos/img/cemento1.jpg"
+                      class="img-fluid rounded-start"
+                      alt="Cemento"
+                    />
+                  </div>
+                  <div class="col-10 col-md-11">
+                    <div class="card-body p-1">
+                      <h6 class="card-title">Cemento</h6>
+                      <p class="card-text m-2">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Sequi expedita ipsam debitis reiciendis nemo iste
+                        id nostrum, voluptas praesentium inventore ad, maiores
+                        aliquid! Perferendis asperiores vel incidunt vero, non
+                        explicabo?
+                      </p>
+                      <p class="card-text text-black m-2 itemPrice text-center">
+                        $ 99.999.999.99
+                      </p>
+                      <div class="row justify-content-center">
+                        <a href="#" class="btn">
+                          <img
+                            class="btnImg"
+                            src="../recursos/img/add.png"
+                            alt="Agregar"
+                          />
+                          <img
+                            class="btnImg2"
+                            src="../recursos/img/added.png"
+                            alt="Agregar"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card prod_card m-2">
+                <div class="row g-0 justify-content-center">
+                  <div class="col-md-6">
+                    <img
+                      src="../recursos/img/cemento1.jpg"
+                      class="img-fluid rounded-start"
+                      alt="Cemento"
+                    />
+                  </div>
+                  <div class="col-10 col-md-11">
+                    <div class="card-body p-1">
+                      <h6 class="card-title">Cemento</h6>
+                      <p class="card-text m-2">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Sequi expedita ipsam debitis reiciendis nemo iste
+                        id nostrum, voluptas praesentium inventore ad, maiores
+                        aliquid! Perferendis asperiores vel incidunt vero, non
+                        explicabo?
+                      </p>
+                      <p class="card-text text-black m-2 itemPrice text-center">
+                        $ 99.999.999.99
+                      </p>
+                      <div class="row justify-content-center">
+                        <a href="#" class="btn">
+                          <img
+                            class="btnImg"
+                            src="../recursos/img/add.png"
+                            alt="Agregar"
+                          />
+                          <img
+                            class="btnImg2"
+                            src="../recursos/img/added.png"
+                            alt="Agregar"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card prod_card m-2">
+                <div class="row g-0 justify-content-center">
+                  <div class="col-md-6">
+                    <img
+                      src="../recursos/img/cemento1.jpg"
+                      class="img-fluid rounded-start"
+                      alt="Cemento"
+                    />
+                  </div>
+                  <div class="col-10 col-md-11">
+                    <div class="card-body p-1">
+                      <h6 class="card-title">Cemento</h6>
+                      <p class="card-text m-2">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Sequi expedita ipsam debitis reiciendis nemo iste
+                        id nostrum, voluptas praesentium inventore ad, maiores
+                        aliquid! Perferendis asperiores vel incidunt vero, non
+                        explicabo?
+                      </p>
+                      <p class="card-text text-black m-2 itemPrice text-center">
+                        $ 99.999.999.99
+                      </p>
+                      <div class="row justify-content-center">
+                        <a href="#" class="btn">
+                          <img
+                            class="btnImg"
+                            src="../recursos/img/add.png"
+                            alt="Agregar"
+                          />
+                          <img
+                            class="btnImg2"
+                            src="../recursos/img/added.png"
+                            alt="Agregar"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card prod_card m-2">
+                <div class="row g-0 justify-content-center">
+                  <div class="col-md-6">
+                    <img
+                      src="../recursos/img/cemento1.jpg"
+                      class="img-fluid rounded-start"
+                      alt="Cemento"
+                    />
+                  </div>
+                  <div class="col-10 col-md-11">
+                    <div class="card-body p-1">
+                      <h6 class="card-title">Cemento</h6>
+                      <p class="card-text m-2">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Sequi expedita ipsam debitis reiciendis nemo iste
+                        id nostrum, voluptas praesentium inventore ad, maiores
+                        aliquid! Perferendis asperiores vel incidunt vero, non
+                        explicabo?
+                      </p>
+                      <p class="card-text text-black m-2 itemPrice text-center">
+                        $ 99.999.999.99
+                      </p>
+                      <div class="row justify-content-center">
+                        <a href="#" class="btn">
+                          <img
+                            class="btnImg"
+                            src="../recursos/img/add.png"
+                            alt="Agregar"
+                          />
+                          <img
+                            class="btnImg2"
+                            src="../recursos/img/added.png"
+                            alt="Agregar"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card prod_card m-2">
+                <div class="row g-0 justify-content-center">
+                  <div class="col-md-6">
+                    <img
+                      src="../recursos/img/cemento1.jpg"
+                      class="img-fluid rounded-start"
+                      alt="Cemento"
+                    />
+                  </div>
+                  <div class="col-10 col-md-11">
+                    <div class="card-body p-1">
+                      <h6 class="card-title">Cemento</h6>
+                      <p class="card-text m-2">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Sequi expedita ipsam debitis reiciendis nemo iste
+                        id nostrum, voluptas praesentium inventore ad, maiores
+                        aliquid! Perferendis asperiores vel incidunt vero, non
+                        explicabo?
+                      </p>
+                      <p class="card-text text-black m-2 itemPrice text-center">
+                        $ 99.999.999.99
+                      </p>
+                      <div class="row justify-content-center">
+                        <a href="#" class="btn">
+                          <img
+                            class="btnImg"
+                            src="../recursos/img/add.png"
+                            alt="Agregar"
+                          />
+                          <img
+                            class="btnImg2"
+                            src="../recursos/img/added.png"
+                            alt="Agregar"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
-    
+
           <section id="prod_cons_seco">
-              <p><-- Construccion en Seco --></p>
+            <p><-- Construccion en Seco --></p>
           </section>
 
           <section id="prod_cons_plomeria">
-              <p><-- Instalacion de Agua y Cloacas --></p>
+            <p><-- Instalacion de Agua y Cloacas --></p>
           </section>
 
           <section id="prod_cons_gas">
             <p><-- Instalacion de Gas --></p>
           </section>
-        
+
           <section id="prod_cons_electricidad">
             <p><-- Electricidad --></p>
           </section>
@@ -376,7 +755,7 @@
           </section>
 
           <section id="prod_herr_sierras">
-          <p><-- Sierras --></p>
+            <p><-- Sierras --></p>
           </section>
 
           <section id="prod_herr_hidrolavadoras">
@@ -396,13 +775,13 @@
           </section>
         </div>
       </div>
+    </div>
+    <footer class="footer">©2022 GySoft Todos los Derechos Reservados</footer>
 
-      <footer class="footer">©2022 GySoft Todos los Derechos Reservados</footer>
-    
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"
-      ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

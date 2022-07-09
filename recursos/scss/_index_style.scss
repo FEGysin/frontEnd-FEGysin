@@ -1,3 +1,4 @@
+@import"_style.scss";
 .frmLogIn{
 
     display: flex;
@@ -19,7 +20,7 @@
             }
         
         .usrImg{
-            width: 50px;
+            width: 40px;
             animation-name: neon_glow;
             animation-duration: 2s;
             animation-iteration-count: infinite;
@@ -28,7 +29,7 @@
                 }
             .pwdImg{
                 width: 0%;
-                visibility: none;
+                visibility: hidden;
                 }
         .logUsr {
             opacity: 0;
@@ -52,11 +53,10 @@
             a {
             transition-duration: 1s;
             opacity: 0;
-            color: black;
+            color: white;
             text-decoration: none;
-            font-size: 7pt;
+            font-size: 10pt;
             @media screen and (min-width :768px){
-                color: white;
                 text-decoration: none;
                 font-size: 10pt;
             }
@@ -85,16 +85,22 @@
                 .logUsr {
                     transition-delay: 100ms;
                     transition-duration: 2s;
-                    width: 130px;
+                    width: 100px;
                     opacity: 1;
                     background-color: aliceblue;
+                    @media screen and (min-width: 768px) {
+                        width: 130px;
+                    }
                 }
             .logPwd{
                 transition-delay: 100ms;
                 transition-duration: 2s;
-                width: 100px;
+                width: 90px;
                 opacity: 1;
                 background-color: aliceblue;
+                @media screen and (min-width: 768px) {
+                    width:100px;
+                }
             }
             a {
                 opacity: 1;
@@ -105,6 +111,7 @@
     
 }
 
+.reel{
 .carousel-item{
     img  {
         height: 10rem;
@@ -131,14 +138,14 @@
             max-width: 80%;
         }
     }
+
     iframe{
         height: 10rem;
-        min-width: 16.24rem;
         max-width: 16.25rem;
         margin: auto;     margin: auto;
         padding: auto;
-        max-height: -moz-fit-content;
-        max-height: fit-content;
+        /*max-height: -moz-fit-content;
+        max-height: fit-content;*/
         @media screen and (min-width: 576px) {
             height: 16rem;
             max-width: 24.38rem;
@@ -161,7 +168,74 @@
         }
     }
 }
+}
+.envFpag{
+    margin: 0px 0px;
+    img{height: 40px;
+        @media screen and (min-width: 768px) {
+            height: 80px;
+        }
+    }
+}
+.reelProd{
+    .carousel-item{
+        img  {
+            height: 1rem;
+            margin: auto;
+           /* @media screen and (min-width: 576px) {
+                height: 1rem;
+                max-width: 24.38rem;
+            }
+            @media screen and (min-width: 768px) {
+                height: 5rem;
+                max-width: 32.5rem;
+            }
+            @media screen and (min-width: 992px) {
+                height: 34rem;
+                max-width: 48.75rem;
+            }
+            @media screen and (min-width: 1200px) {
+                height: 46rem;
+                max-width: 74.75rem;
+            }
+            @media screen and (min-width: 1400px) {
+                height: 80%;
+                max-width: 80%;
+            }*/
+        }
+    
+        iframe{
+            height: 1rem;
+            margin: auto;
+            padding: auto;
+            /*max-height: -moz-fit-content;
+            max-height: fit-content;
+            @media screen and (min-width: 576px) {
+                height: 16rem;
+                max-width: 24.38rem;
+            }
+            @media screen and (min-width: 768px) {
+                height: 22rem;
+                max-width: 32.5rem;
+            }
+            @media screen and (min-width: 992px) {
+                height: 34rem;
+                max-width: 48.75rem;
+            }
+            @media screen and (min-width: 1200px) {
+                height: 46rem;
+                max-width: 74.75rem;
+            }
+            @media screen and (min-width: 1400px) {
+                height: 80%;
+                max-width: 80%;
+            }*/
+        }
+    }
+}
+
 .whoWeAre {
+    background-color: white;
     display: flex;
     flex-direction: column;
     font-family: "Times New Roman", Times, serif;

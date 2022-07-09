@@ -11,7 +11,7 @@
 .encabezado {
     display: flex;
     background-color: $colorBase;
-    height: 90px;
+    height: 80px;
     @media screen and (min-width: 768px) {
         height: 120px;
         padding-left: 1rem;
@@ -19,48 +19,123 @@
     }
     img {
         height: 90%;
+    /*    @media screen and (min-width: 768px) {
+            height: 90%;
+        }*/
     }
 }  
-    
 
 .navBar {
     width: 100%;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color:$colorSecundario;
+    border: 1px solid $colorSecundario;
+    border-radius: 4px;
+    .btn {
+        font-size: 14pt;
+        @media screen and (min-width: 768px)  {
+            font-size: 16pt;
+    }  
+    }
+    .bi {
+        vertical-align: -.125em;
+        fill: white;
+        }
     a {
-        text-decoration: none;
-        font-size: 9pt;
+        font-size: 12pt;
         font-family: "Times New Roman", Times, serif;
-        display: inline-block;
-        color: black;
         @media screen and (min-width: 768px) {
             font-size: 14pt;
         }
     }
-    ul li{
-        text-decoration: none;
-        font-size: 9pt;
-        font-family: "Times New Roman", Times, serif;
-        display: inline-block;
-        color: black;
-        @media screen and (min-width: 768px) {
-            font-size: 14pt;
-        }
-        a {
-            text-decoration: none;
-            font-size: 9pt;
+    ul { 
+        margin-left: 15px;
+        li{
+            font-size: 12pt;
             font-family: "Times New Roman", Times, serif;
-            display: inline-block;
-            color: black;
             @media screen and (min-width: 768px) {
                 font-size: 14pt;
+            }
+            a {
+                font-size: 12pt;
+                font-family: "Times New Roman", Times, serif;
+                @media screen and (min-width: 768px) {
+                    font-size: 14pt;
+                }
             }
         }
     }
 }
+
+/*
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.bd-placeholder-img-lg {
+    font-size: 3.5rem;
+}
+.btn {
+    font-size: 12pt;
+    @media screen and (min-width: 768px)  {
+        font-size: 16pt;
+}  
+}
+
+.btn-toggle-nav{
+    li {
+        font-size: 12pt;
+        margin-left: 5%;
+    @media screen and (min-width: 768px)    {
+        font-size: 14pt;
+        margin-left: 5%;
+        }
+    }
+}
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: solid rgba(0, 0, 0, 0.15);
+    border-width: 1px 0;
+    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+}
+
+.bi {
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+    .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+*/
 
 .bodyCont {
     margin: 5px;
