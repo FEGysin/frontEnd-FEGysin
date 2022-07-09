@@ -1,8 +1,8 @@
 .encabezado {
-  height: 100px;
+  height: 80px;
 }
 .encabezado img {
-  height: 50%;
+  height: 60%;
 }
 
 @media screen and (min-width: 768px) {

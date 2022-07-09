@@ -6,12 +6,12 @@
 
     $colorBase:black;
     $colorSecundario:rgba(76, 187, 214,1);
-    
+    $colorTerciario:white;
 
 .encabezado {
     display: flex;
     background-color: $colorBase;
-    height: 80px;
+    height: 70px;
     @media screen and (min-width: 768px) {
         height: 120px;
         padding-left: 1rem;
@@ -35,107 +35,44 @@
     border: 1px solid $colorSecundario;
     border-radius: 4px;
     .btn {
-        font-size: 14pt;
+        font-size: 16pt;
         @media screen and (min-width: 768px)  {
-            font-size: 16pt;
+            font-size: 14pt;
     }  
     }
     .bi {
         vertical-align: -.125em;
-        fill: white;
+        fill: white;  
+        width:32px; 
+        height:32px;
         }
     a {
-        font-size: 12pt;
+        font-size: 16pt;
+        text-decoration: none;
+        color: white;
         font-family: "Times New Roman", Times, serif;
         @media screen and (min-width: 768px) {
-            font-size: 14pt;
+            font-size: 12pt;
         }
     }
     ul { 
         margin-left: 15px;
         li{
-            font-size: 12pt;
+            font-size: 14pt;
             font-family: "Times New Roman", Times, serif;
             @media screen and (min-width: 768px) {
-                font-size: 14pt;
+                font-size: 12pt;
             }
             a {
-                font-size: 12pt;
+                font-size: 14pt;
                 font-family: "Times New Roman", Times, serif;
                 @media screen and (min-width: 768px) {
-                    font-size: 14pt;
+                    font-size: 12pt;
                 }
             }
         }
     }
 }
-
-/*
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-.bd-placeholder-img-lg {
-    font-size: 3.5rem;
-}
-.btn {
-    font-size: 12pt;
-    @media screen and (min-width: 768px)  {
-        font-size: 16pt;
-}  
-}
-
-.btn-toggle-nav{
-    li {
-        font-size: 12pt;
-        margin-left: 5%;
-    @media screen and (min-width: 768px)    {
-        font-size: 14pt;
-        margin-left: 5%;
-        }
-    }
-}
-
-.b-example-divider {
-    height: 3rem;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: solid rgba(0, 0, 0, 0.15);
-    border-width: 1px 0;
-    box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
-    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
-}
-
-.b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-}
-
-.bi {
-    vertical-align: -0.125em;
-    fill: currentColor;
-}
-
-.nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-    .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-    }
-}
-*/
 
 .bodyCont {
     margin: 5px;
@@ -168,6 +105,56 @@
 
     }
 }
+$btnSize:(
+sm:0.80, 
+md:1, 
+lg:1.20,
+);
+
+$paletaColor:(
+primary:$colorBase,
+secundary:$colorSecundario,
+tiertiary:$colorTerciario,
+negro:black,
+blanco:white,
+submit:rgb(57, 173, 28),
+);
+/*$Loc{
+
+}*/
+
+@mixin btn-std {
+height:15px;
+Width:100px;
+Background-color:grey;
+Font-size:10pt;
+Color:black;
+Text-align:center;
+}
+
+@mixin crBtn ($height, $width, $btn-size, $bg-color, $fnt-size, $fnt-color, $fnt-loc){
+$size: map-get($btnSize,$btn-size);
+@include btn-std;
+
+@if ($height > 0) {
+	height:calc($height*$size)+px;} @else{
+height:calc($height*$size)+px;
+}
+
+@if ($width>0){
+width:calc($width*$size)+px;}
+@else{
+width:calc($width*$size)+px;
+}
+
+@if ($bg-color !=””) {background-color:map-get($paletaColor,$bg-color);
+}
+@if ($fnt-size>0){font-size: $fnt-size+pt;}
+@if ($fnt-color !=””) {color: map-get($paletaColor,$fnt-color);} @else{color:black;}
+
+@if ($fnt-loc !=””) {text-align:$fnt-loc;}
+}
+
 .footer {
     background-color: $colorSecundario;
     text-align: center;

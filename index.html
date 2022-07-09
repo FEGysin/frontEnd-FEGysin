@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <meta name="description" content="Encuentre todo lo necesario para la Construccion y Mantenimiento del Hogar">
+    <meta name="keywords" content="Construccion, Plomeria, Gas, Gasista, Plomero, Electricidad, Electricista, Albañileria, Ceramicos, Herramientas">
+    <title> La Monoco Corralón y Ferreteria</title>
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -12,6 +14,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./recursos/css/styles.css" />
     <!--<link rel="stylesheet" href="./recursos/css/index_style.css" />-->
     <link rel="stylesheet" href="./recursos/css/main.css" />
@@ -53,11 +56,11 @@
                 placeholder="Contraseña"
                 required
               />
-              <a href="./pages/log_index.html">Go</a>
-              <!--Confirma Usr y Pwd avanza a Pagina log_index (Usuario Logueado)-->
+              <a href="./pages/products.html">Go</a>
+              <!--Confirma Usr y Pwd avanza a Pagina products (Usuario Logueado)-->
             </div>
-            <a href="./pages/accountForm.html">Registrarme</a>
-            <!--Va a Formulario accountForm (Apertura Cuenta)-->
+            <a href="./pages/newCustomer.html">Registrarme</a>
+            <!--Va a Formulario newCustomer (Apertura Cuenta)-->
             <!--<input type="button" value="Go" id="btn_validar">-->
           </form>
         </div>
@@ -96,31 +99,27 @@
           </div>
           <div class="offcanvas-body">
             <ul class="nav nav-pills flex-column mb-auto">
-              <li class="nav-item active">
-                <a href="../index.html" class="nav-link" aria-current="page">
-                  <svg class="bi pe-none me-2" width="20" height="20">
-                    <use xlink:href="#home" />
-                  </svg>
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link" aria-current="page">
+                  <i class="bi bi-house-door"></i>
                   HOME
                 </a>
               </li>
               <li class="nav-item">
                 <a
-                  href="./log_index.html"
-                  class="nav-link"
+                  href="./pages/products.html"
+                  class="nav-link active"
                   aria-current="page"
                 >
-                  <svg class="bi pe-none me-2" width="20" height="20">
-                    <use xlink:href="#grid" />
-                  </svg>
+                  <i class="bi bi-grid"></i>
                   VENTAS
                 </a>
               </li>
             </ul>
 
-<!--Menu Usuario-->>
+<!--Menu Usuario-->
             <ul class="list-unstyled ps-0">
-              <li class="border-top my-2"></li>
+              <li class="border-top my-1"></li>
               <li class="mb-1">
                 <button
                   class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed"
@@ -128,58 +127,47 @@
                   data-bs-target="#account-collapse"
                   aria-expanded="false"
                 >
-                  Menu Usuario
+                >  Menu Usuario
                 </button>
                 <div class="collapse" id="account-collapse">
                   <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li class="nav-item">
                       <a
-                        href="./accountForm2.html"
+                        href="./pages/myData.html"
                         class="nav-link"
                         aria-current="page"
                       >
-                        <svg class="bi pe-none me-2" width="20" height="20">
-                          <use xlink:href="#people-circle" />
-                        </svg>
+                        <i class="bi bi-person-badge"></i>
                         Mis Datos
                       </a>
                     </li>
                     <li class="nav-item">
                       <a
-                        href="./histCompras.html"
+                        href="./pages/histCompras.html"
                         class="nav-link"
                         aria-current="page"
                       >
-                        <svg class="bi pe-none me-2" width="20" height="20">
-                          <use xlink:href="#calendar3" />
-                        </svg>
+                        <i class="bi bi-calendar3"></i>
                         Mis Compras
                       </a>
                     </li>
                     <li class="nav-item">
                       <a
-                        href="./mycart.html"
+                        href="./pages/mycart.html"
                         class="nav-link"
                         aria-current="page"
                       >
-                        <img
-                          class="bi pe-none me-2"
-                          src="../recursos/img/Added.png" alt=""
-                          width="20"
-                          height="20"
-                        ></img>
+                        <i class="bi bi-cart-check"></i>
                         Carrito
                       </a>
                     </li>
                     <li class="nav-item">
                       <a
-                        href="../index.html"
+                        href="./index.html"
                         class="nav-link"
                         aria-current="page"
                       >
-                        <svg class="bi pe-none me-2" width="20" height="20">
-                          <use xlink:href="#chevron-right" />
-                        </svg>
+                        <i class="bi bi-door-open"></i>
                         SALIR
                       </a>
                     </li>
@@ -241,21 +229,25 @@
       </div>
     </section>
 
-      <div class="envFpag row flex-wrap justify-content-center bg-white mb-2">
-        <div class="col-2">
-          <img src="./recursos/img/envios.png" alt="Envios a Domicilio">
+      <div class="envFpag row flex-wrap justify-content-center mb-2">
+        <div class="col-3">
+          <div>
+          <a href=""></a><img src="./recursos/img/envios.png" alt="Envios a Domicilio"></a>
+          <p class="text-center"> Envio a Domicilio</p>
+          </div>
         </div>
         <div class="col-4">
-          <img src="./recursos/img/fPago.jpg" alt="Formas de Pago">
+          <a href=""></a><img src="./recursos/img/fPago.jpg" alt="Formas de Pago"></a>
+          <p class="text-center"> Formas de Pago</p>
         </div>
-        <div class="col-2">
-          <img src="./recursos/img/estadoEnvio.png" alt="Estado de Envio">
+        <div class="col-3">
+          <a href=""><img src="./recursos/img/estadoEnvio.png" alt="Estado de Envio"></a>
+          <p class="text-center"> Siga su Envio</p>
         </div>
       </div>
 
       <div class="whoWeAre">
-      <section id="quienessomos">
-      <h2>Quienes Somos</h2>
+            <h2>Quienes Somos</h2>
       <!--En esta Seccion iran los Detalles de la Empresa-->
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt in
@@ -273,18 +265,18 @@
         delectus, natus ratione eos quis itaque, ex aut nisi! Hic dolor officiis
         sed, minus aliquam quam quidem iure neque?
       </p>
-    </section>
       <hr />
     </div>
     <div class="row justify-content-around">
-      <div class="col-12 col-lg-4" >
-      <div class="ubicacion">
+      <div class="col-12 col-lg-5" >
+      <div class="ubicacion p-2">
         <h3>Dónde Estamos</h3>
         <img src="./recursos/img/loc.png" alt="" />
         <hr />
       </div>
     </div>
     <div class="col-12 col-lg-6" >
+
       <section id="contacto">
         <div class="frmContacto">       
           <form class="p-2">
@@ -309,7 +301,7 @@
               ></textarea>
             </div>
             <div class="frmContactoBtn">
-              <input type="submit" value="Enviar" />
+              <input class="btn-submit" type="submit" value="Enviar" />
               <input type="reset" value="Reiniciar" />
             </div>
           </form>

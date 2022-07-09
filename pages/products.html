@@ -4,64 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documennavt</title>
+    <title>La Monoco Ventas Online</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="../recursos/css/styles.css" />
-    <!--<link rel="stylesheet" href="../recursos/css/log_index_style.css" />-->
+    <!--<link rel="stylesheet" href="../recursos/css/products_style.css" />-->
     <link rel="stylesheet" href="../recursos/css/main.css" />
   </head>
 
   <body class="container-fluid bg-black">
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="home" viewBox="0 0 16 16">
-        <path
-          d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"
-        />
-      </symbol>
-      <symbol id="table" viewBox="0 0 16 16">
-        <path
-          d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"
-        />
-      </symbol>
-      <symbol id="people-circle" viewBox="0 0 16 16">
-        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-        <path
-          fill-rule="evenodd"
-          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
-        />
-      </symbol>
-      <symbol id="grid" viewBox="0 0 16 16">
-        <path
-          d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"
-        />
-      </symbol>
-      <symbol id="calendar3" viewBox="0 0 16 16">
-        <path
-          d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"
-        />
-        <path
-          d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
-        />
-      </symbol>
-      <symbol id="chevron-right" viewBox="0 0 16 16">
-        <path
-          fill-rule="evenodd"
-          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-        />
-      </symbol>
-      <symbol id="geo-fill" viewBox="0 0 16 16">
-        <path
-          fill-rule="evenodd"
-          d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"
-        />
-      </symbol>
-    </svg>
-
     <header class="encabezado">
       <a href="../index.html">
         <img src="../recursos/img/encabezado.png" alt="Encabezado"
@@ -72,6 +31,14 @@
       class="navBar navbar-dark bg-dark sticky-top"
       aria-label="Dark offcanvas navbar"
     >
+      <!--<ul>
+      <li class="nav-item row">
+        <a class="nav-link active" aria-current="page" href="www.facebook.com"><img src="" alt=""></a>
+        <a class="nav-link active" aria-current="page" href="www.tweeter.com"><i class="bi bi-twitter"  width="20" height="20"></i></a>
+        <a class="nav-link active" aria-current="page" href="www.instagram.com"><img src="" alt=""></a>
+        <a class="nav-link active" aria-current="page" href="www.youtube.com"><img src="" alt=""></a>
+      </li>
+    </ul>-->
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -101,28 +68,23 @@
             <ul class="nav nav-pills flex-column mb-auto">
               <li class="nav-item">
                 <a href="../index.html" class="nav-link" aria-current="page">
-                  <svg class="bi pe-none me-2" width="20" height="20">
-                    <use xlink:href="#home" />
-                  </svg>
+                  <i class="bi bi-house-door"></i>
                   HOME
                 </a>
               </li>
               <li class="nav-item">
                 <a
-                  href="./log_index.html"
+                  href="./products.html"
                   class="nav-link active"
                   aria-current="page"
                 >
-                  <svg class="bi pe-none me-2" width="20" height="20">
-                    <use xlink:href="#grid" />
-                  </svg>
+                  <i class="bi bi-grid"></i>
                   VENTAS
                 </a>
               </li>
             </ul>
 
-
-<!--Menu Ventas-->
+            <!--Menu Ventas-->
             <ul class="list-unstyled ps-0">
               <li class="border-top my-1"></li>
               <li class="mb-1">
@@ -381,7 +343,7 @@
               </li>
             </ul>
 
-<!--Menu Usuario-->>
+            <!--Menu Usuario-->
             <ul class="list-unstyled ps-0">
               <li class="border-top my-2"></li>
               <li class="mb-1">
@@ -397,13 +359,11 @@
                   <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li class="nav-item">
                       <a
-                        href="./accountForm2.html"
+                        href="./myData.html"
                         class="nav-link"
                         aria-current="page"
                       >
-                        <svg class="bi pe-none me-2" width="20" height="20">
-                          <use xlink:href="#people-circle" />
-                        </svg>
+                        <i class="bi bi-person-badge"></i>
                         Mis Datos
                       </a>
                     </li>
@@ -413,9 +373,7 @@
                         class="nav-link"
                         aria-current="page"
                       >
-                        <svg class="bi pe-none me-2" width="20" height="20">
-                          <use xlink:href="#calendar3" />
-                        </svg>
+                        <i class="bi bi-calendar3"></i>
                         Mis Compras
                       </a>
                     </li>
@@ -425,12 +383,7 @@
                         class="nav-link"
                         aria-current="page"
                       >
-                        <img
-                          class="bi pe-none me-2"
-                          src="../recursos/img/Added.png" alt=""
-                          width="20"
-                          height="20"
-                        ></img>
+                        <i class="bi bi-cart-check"></i>
                         Carrito
                       </a>
                     </li>
@@ -440,14 +393,11 @@
                         class="nav-link"
                         aria-current="page"
                       >
-                        <svg class="bi pe-none me-2" width="20" height="20">
-                          <use xlink:href="#chevron-right" />
-                        </svg>
+                        <i class="bi bi-door-open"></i>
                         SALIR
                       </a>
                     </li>
                   </ul>
-
                 </div>
               </li>
             </ul>
