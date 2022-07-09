@@ -73,11 +73,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  href="./products.html"
-                  class="nav-link active"
-                  aria-current="page"
-                >
+                <a href="./products.html" class="nav-link" aria-current="page">
                   <i class="bi bi-grid"></i>
                   VENTAS
                 </a>
@@ -92,12 +88,14 @@
                   class="btn btn-toggle text-white d-inline-flex align-items-center rounded border-0 collapsed"
                   data-bs-toggle="collapse"
                   data-bs-target="#account-collapse"
-                  aria-expanded="false"
+                  aria-expanded="true"
                 >
                   > Menu Usuario
                 </button>
-                <div class="collapse" id="account-collapse">
-                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <div class="collapse show" id="account-collapse">
+                  <ul
+                    class="btn-toggle-nav list-unstyled fw-normal pb-1 small smallnav nav-pills flex-column mb-auto"
+                  >
                     <li class="nav-item">
                       <a
                         href="./myData.html"
@@ -121,14 +119,14 @@
                     <li class="nav-item">
                       <a
                         href="./mycart.html"
-                        class="nav-link"
+                        class="nav-link active"
                         aria-current="page"
                       >
                         <i class="bi bi-cart-check"></i>
                         Carrito
                       </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                       <a
                         href="../index.html"
                         class="nav-link"
