@@ -156,6 +156,16 @@ width:calc($width*$size)+px;
 @if ($fnt-loc !=””) {text-align:$fnt-loc;}
 }
 
+@mixin animate($animation,$duration,$method,$times){
+    animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
 .footer {
     background-color: $colorSecundario;
     text-align: center;

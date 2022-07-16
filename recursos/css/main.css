@@ -266,10 +266,22 @@
   width: 40px;
   -webkit-animation-name: neon_glow;
           animation-name: neon_glow;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+@-webkit-keyframes neon_glow {
+  50% {
+    box-shadow: 0px 0px 3px 4px cyan;
+    filter: grayscale(0%);
+  }
+}
+@keyframes neon_glow {
+  50% {
+    box-shadow: 0px 0px 3px 4px cyan;
+    filter: grayscale(0%);
+  }
 }
 @media screen and (min-width: 768px) {
   .frmLogIn .usrImg {
@@ -822,6 +834,12 @@
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   /*box-shadow: 4px 4px 6px $colorSecundario;*/
+}
+@keyframes neon_glow {
+  50% {
+    box-shadow: 0px 0px 3px 4px cyan;
+    filter: grayscale(0%);
+  }
 }
 
 .prod_itemContainer {

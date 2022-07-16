@@ -22,8 +22,14 @@
         
         .usrImg{
             width: 40px;
+            @include keyframes(neon_glow){
+                    50% {
+                    box-shadow: 0px 0px 3px 4px cyan;
+                    filter: grayscale(0%);
+                        }
+                    }
             animation-name: neon_glow;
-            animation-duration: 2s;
+            animation-duration: 1.5s;
             animation-iteration-count: infinite;
             @media screen and (min-width :768px){
             width: 70px;}
