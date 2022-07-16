@@ -12,7 +12,15 @@
         }
     }
 }
-
+.logoMarca{
+    height:40px;
+    @media screen and (min-width: 768px){
+        height:70px;
+    }
+    img{
+        height:80%;
+    }
+}
 .prod_card {
     width: 300px; 
     @media screen and (min-width: 768px){
