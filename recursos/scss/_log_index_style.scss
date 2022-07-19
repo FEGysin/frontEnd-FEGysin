@@ -87,16 +87,11 @@
         position: relative;
         top: -3px;
         right: 3px;
-        @include keyframes(neon_glow){
-            50% {
-            box-shadow: 0px 0px 3px 4px cyan;
-            filter: grayscale(0%);
-            }
-        }
-        animation-name: neon_glow;
+        @include animate(neon_glow, 1.5s, linear, infinite)
+        /*animation-name: neon_glow;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
-        /*box-shadow: 4px 4px 6px $colorSecundario;*/
+        box-shadow: 4px 4px 6px $colorSecundario;*/
     }
 }
 

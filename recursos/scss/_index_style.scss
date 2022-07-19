@@ -1,4 +1,20 @@
 @import"_style.scss";
+.indexencab{
+    display: flex;
+    background-color: $colorBase;
+    height: 70px;
+    @media screen and (min-width: 768px) {
+        height: 120px;
+        padding-left: 1rem;
+        background-color: $colorBase;
+    }
+    img{
+height: 70%;
+@media screen and (min-width: 768px) {
+    height: 90%;
+    }
+}
+}
 .frmLogIn{
 
     display: flex;

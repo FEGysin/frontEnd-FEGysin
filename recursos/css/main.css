@@ -240,6 +240,27 @@
   text-align: center;
 }
 
+.indexencab {
+  display: flex;
+  background-color: black;
+  height: 70px;
+}
+@media screen and (min-width: 768px) {
+  .indexencab {
+    height: 120px;
+    padding-left: 1rem;
+    background-color: black;
+  }
+}
+.indexencab img {
+  height: 70%;
+}
+@media screen and (min-width: 768px) {
+  .indexencab img {
+    height: 90%;
+  }
+}
+
 .frmLogIn {
   display: flex;
   flex-direction: row;
@@ -827,19 +848,13 @@
   position: relative;
   top: -3px;
   right: 3px;
+  /*animation: $animation $duration $method $times;*/
   -webkit-animation-name: neon_glow;
           animation-name: neon_glow;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  /*box-shadow: 4px 4px 6px $colorSecundario;*/
-}
-@keyframes neon_glow {
-  50% {
-    box-shadow: 0px 0px 3px 4px cyan;
-    filter: grayscale(0%);
-  }
 }
 
 .prod_itemContainer {

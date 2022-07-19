@@ -157,7 +157,11 @@ width:calc($width*$size)+px;
 }
 
 @mixin animate($animation,$duration,$method,$times){
-    animation: $animation $duration $method $times;
+    /*animation: $animation $duration $method $times;*/
+    animation-name: $animation;
+animation-duration: $duration;
+animation-iteration-count: $times
+
 }
 
 @mixin keyframes($name){
