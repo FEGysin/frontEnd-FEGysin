@@ -7,10 +7,25 @@
     .card-header{
         background-color: $colorSecundario;
     }
+    .card-title{
+        background-color: $colorSecundario;
+    }
     ul li {
     font-size: 10pt;
     @media screen and (min-width: 912px) {
         font-size: 14pt;
+        img{ width: 90px;
+        padding-right: 20px;
+                    }
     }
+    img{
+        width: 60px;
+        padding-right: 15px;
     }
+
+    }
+    .text-right{
+        text-align: right;
+    }
+
 }

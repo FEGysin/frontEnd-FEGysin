@@ -12,3 +12,6 @@
     background-color: black;
     color: white;
 }
+.btn-cancel-lg{
+    @include crBtn (30, 55, lg, cancel, 11pt, blanco, center);
+}

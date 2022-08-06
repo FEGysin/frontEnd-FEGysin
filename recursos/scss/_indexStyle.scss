@@ -167,8 +167,6 @@ height: 70%;
         max-width: 16.25rem;
         margin: auto;     margin: auto;
         padding: auto;
-        /*max-height: -moz-fit-content;
-        max-height: fit-content;*/
         @media screen and (min-width: 576px) {
             height: 16rem;
             max-width: 24.38rem;
@@ -201,72 +199,15 @@ height: 70%;
             display: block;
             margin-left: auto;
             margin-right: auto;
-            /*width: 50%;*/
         @media screen and (min-width: 768px) {
             height: 80px;
         }
     }
     p{
         font-size: 10pt;
-          @media screen and (min-width: 768px) {
+            @media screen and (min-width: 768px) {
             font-size: 15pt;
-          }
-    }
-}
-.reelProd{
-    .carousel-item{
-        img  {
-            height: 1rem;
-            margin: auto;
-           /* @media screen and (min-width: 576px) {
-                height: 1rem;
-                max-width: 24.38rem;
             }
-            @media screen and (min-width: 768px) {
-                height: 5rem;
-                max-width: 32.5rem;
-            }
-            @media screen and (min-width: 992px) {
-                height: 34rem;
-                max-width: 48.75rem;
-            }
-            @media screen and (min-width: 1200px) {
-                height: 46rem;
-                max-width: 74.75rem;
-            }
-            @media screen and (min-width: 1400px) {
-                height: 80%;
-                max-width: 80%;
-            }*/
-        }
-    
-        iframe{
-            height: 1rem;
-            margin: auto;
-            padding: auto;
-            /*max-height: -moz-fit-content;
-            max-height: fit-content;
-            @media screen and (min-width: 576px) {
-                height: 16rem;
-                max-width: 24.38rem;
-            }
-            @media screen and (min-width: 768px) {
-                height: 22rem;
-                max-width: 32.5rem;
-            }
-            @media screen and (min-width: 992px) {
-                height: 34rem;
-                max-width: 48.75rem;
-            }
-            @media screen and (min-width: 1200px) {
-                height: 46rem;
-                max-width: 74.75rem;
-            }
-            @media screen and (min-width: 1400px) {
-                height: 80%;
-                max-width: 80%;
-            }*/
-        }
     }
 }
 
@@ -287,7 +228,6 @@ height: 70%;
     color: white;
     display: flex;
     flex-direction: column;
-
 }
 .frmContacto {
     color: white;
@@ -314,8 +254,25 @@ height: 70%;
 }
 }
 .btn-submit{
-    @include crBtn (30, 50, md, submit, 10pt, blanco, center);
-    
+    @include crBtn (30, 55, md, submit, 10pt, blanco, center);
+}
+.btn-reset{
+    @include crBtn (30, 55, md, resetear, 10pt, blanco, center);
+}
+.btn-cancel{
+  @include crBtn (30, 55, lg, cancel, 11pt, blanco, center);
+}
 
+.btn-submit-lg{
+    @include crBtn (30, 55, lg, submit, 11pt, blanco, center);
+}
+.btn-reset-lg{
+    @include crBtn (30, 55, lg, resetear, 11pt, blanco, center);
+}
+.btn-loc{
+@include crBtn (100, 150, md, negro, 9pt, blanco, center);
+.encab{font-size: 12pt;
+    margin-bottom: 3px;
+}
 }
 

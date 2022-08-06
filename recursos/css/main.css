@@ -447,8 +447,6 @@
   margin: auto;
   margin: auto;
   padding: auto;
-  /*max-height: -moz-fit-content;
-  max-height: fit-content;*/
 }
 @media screen and (min-width: 576px) {
   .reel .carousel-item iframe {
@@ -491,7 +489,6 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /*width: 50%;*/
 }
 @media screen and (min-width: 768px) {
   .envFpag img {
@@ -505,58 +502,6 @@
   .envFpag p {
     font-size: 15pt;
   }
-}
-
-.reelProd .carousel-item img {
-  height: 1rem;
-  margin: auto;
-  /* @media screen and (min-width: 576px) {
-       height: 1rem;
-       max-width: 24.38rem;
-   }
-   @media screen and (min-width: 768px) {
-       height: 5rem;
-       max-width: 32.5rem;
-   }
-   @media screen and (min-width: 992px) {
-       height: 34rem;
-       max-width: 48.75rem;
-   }
-   @media screen and (min-width: 1200px) {
-       height: 46rem;
-       max-width: 74.75rem;
-   }
-   @media screen and (min-width: 1400px) {
-       height: 80%;
-       max-width: 80%;
-   }*/
-}
-.reelProd .carousel-item iframe {
-  height: 1rem;
-  margin: auto;
-  padding: auto;
-  /*max-height: -moz-fit-content;
-  max-height: fit-content;
-  @media screen and (min-width: 576px) {
-      height: 16rem;
-      max-width: 24.38rem;
-  }
-  @media screen and (min-width: 768px) {
-      height: 22rem;
-      max-width: 32.5rem;
-  }
-  @media screen and (min-width: 992px) {
-      height: 34rem;
-      max-width: 48.75rem;
-  }
-  @media screen and (min-width: 1200px) {
-      height: 46rem;
-      max-width: 74.75rem;
-  }
-  @media screen and (min-width: 1400px) {
-      height: 80%;
-      max-width: 80%;
-  }*/
 }
 
 .whoWeAre {
@@ -614,11 +559,90 @@
   Color: black;
   Text-align: center;
   height: 30px;
-  width: 50px;
+  width: 55px;
   background-color: rgb(57, 173, 28);
   font-size: 10ptpt;
   color: white;
   text-align: center;
+}
+
+.btn-reset {
+  height: 15px;
+  Width: 100px;
+  Background-color: grey;
+  Font-size: 10pt;
+  Color: black;
+  Text-align: center;
+  height: 30px;
+  width: 55px;
+  background-color: rgba(255, 94, 0, 0.918);
+  font-size: 10ptpt;
+  color: white;
+  text-align: center;
+}
+
+.btn-cancel {
+  height: 15px;
+  Width: 100px;
+  Background-color: grey;
+  Font-size: 10pt;
+  Color: black;
+  Text-align: center;
+  height: 36px;
+  width: 66px;
+  background-color: rgba(255, 0, 0, 0.795);
+  font-size: 11ptpt;
+  color: white;
+  text-align: center;
+}
+
+.btn-submit-lg {
+  height: 15px;
+  Width: 100px;
+  Background-color: grey;
+  Font-size: 10pt;
+  Color: black;
+  Text-align: center;
+  height: 36px;
+  width: 66px;
+  background-color: rgb(57, 173, 28);
+  font-size: 11ptpt;
+  color: white;
+  text-align: center;
+}
+
+.btn-reset-lg {
+  height: 15px;
+  Width: 100px;
+  Background-color: grey;
+  Font-size: 10pt;
+  Color: black;
+  Text-align: center;
+  height: 36px;
+  width: 66px;
+  background-color: rgba(255, 94, 0, 0.918);
+  font-size: 11ptpt;
+  color: white;
+  text-align: center;
+}
+
+.btn-loc {
+  height: 15px;
+  Width: 100px;
+  Background-color: grey;
+  Font-size: 10pt;
+  Color: black;
+  Text-align: center;
+  height: 100px;
+  width: 150px;
+  background-color: black;
+  font-size: 9ptpt;
+  color: white;
+  text-align: center;
+}
+.btn-loc .encab {
+  font-size: 12pt;
+  margin-bottom: 3px;
 }
 
 * {
@@ -1011,6 +1035,9 @@
 .hist_card .card-header {
   background-color: rgb(76, 187, 214);
 }
+.hist_card .card-title {
+  background-color: rgb(76, 187, 214);
+}
 .hist_card ul li {
   font-size: 10pt;
 }
@@ -1018,6 +1045,17 @@
   .hist_card ul li {
     font-size: 14pt;
   }
+  .hist_card ul li img {
+    width: 90px;
+    padding-right: 20px;
+  }
+}
+.hist_card ul li img {
+  width: 60px;
+  padding-right: 15px;
+}
+.hist_card .text-right {
+  text-align: right;
 }
 
 * {
@@ -1153,4 +1191,19 @@
 .form-select {
   background-color: black;
   color: white;
+}
+
+.btn-cancel-lg {
+  height: 15px;
+  Width: 100px;
+  Background-color: grey;
+  Font-size: 10pt;
+  Color: black;
+  Text-align: center;
+  height: 36px;
+  width: 66px;
+  background-color: rgba(255, 0, 0, 0.795);
+  font-size: 11ptpt;
+  color: white;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
